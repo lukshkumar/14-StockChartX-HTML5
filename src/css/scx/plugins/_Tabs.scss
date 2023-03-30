@@ -1,0 +1,47 @@
+.scxTabs {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @include clearfix();
+
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+
+  .scxTabItem {
+    float: left;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+
+    color: #DDD;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+
+    width: 50%;
+
+    &:hover {
+      color: #FFF;
+      cursor: pointer;
+    }
+
+    &.active {
+      color: #FFF;
+      border-bottom-color: #03A9F4;
+      cursor: auto;
+    }
+  }
+}
+
+.scxTabsContent {
+  width: 100%;
+
+  .scxTabPanel {
+    display: none;
+    width: 100%;
+
+    &.active {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+[
+  { "symbol": "ARDI", "company": "@Road Inc", "exchange": "NSD" },
+  { "symbol": "JOBS", "company": "51Job Inc ADR", "exchange": "NSD" },
+  { "symbol": "EGHT", "company": "8 X 8 Inc", "exchange": "NSD" },
+  { "symbol": "SHLM", "company": "A Schulman Inc", "exchange": "NSD" },
+  { "symbol": "SWAT", "company": "A4S Sec Inc", "exchange": "NSD" },
+  { "symbol": "VOLV", "company": "AB Volvo", "exchange": "NSD" },
+  { "symbol": "ABIX", "company": "Abatix Cp", "exchange": "NSD" },
+  {
+    "symbol": "SEMI",
+    "company": "All American Semiconductor Inc",
+    "exchange": "NSD"
+  },
+  {
+    "symbol": "AHCI",
+    "company": "Allied Healthcare Intl Inc",
+    "exchange": "NSD"
+  },
+  { "symbol": "EPAX", "company": "Ambassadors Group Inc", "exchange": "NSD" },
+  { "symbol": "MENT", "company": "Mentor Graphics Cp", "exchange": "NSD" },
+  { "symbol": "MSCC", "company": "Microsemi Cp", "exchange": "NSD" },
+  { "symbol": "MSFT", "company": "Microsoft Cp", "exchange": "NSD" },
+  { "symbol": "MSTR", "company": "Microstrategy Inc", "exchange": "NSD" },
+  {
+    "symbol": "MSTRW",
+    "company": "Microstrategy Inc Wts 6/24/07",
+    "exchange": "NSD"
+  },
+  {
+    "symbol": "MTMD",
+    "company": "Microtek Medical Holdings Inc",
+    "exchange": "NSD"
+  },
+  { "symbol": "TUNE", "company": "Microtune Inc", "exchange": "NSD" },
+  { "symbol": "MVIS", "company": "Microvision Inc", "exchange": "NSD" },
+  { "symbol": "MVISW", "company": "Microvision Inc Wt", "exchange": "NSD" },
+  { "symbol": "MFCO", "company": "Microwave Filter Co Inc", "exchange": "NSD" },
+  { "symbol": "MEND", "company": "Micrus Endovascular Cp", "exchange": "NSD" },
+  { "symbol": "MDST", "company": "Mid State Bancshares", "exchange": "NSD" },
+  { "symbol": "MBRG", "company": "Middleburg Financial Cp", "exchange": "NSD" },
+  { "symbol": "MIDD", "company": "Middleby Cp", "exchange": "NSD" },
+  { "symbol": "MSEX", "company": "Middlesex Water Co", "exchange": "NSD" },
+  { "symbol": "MLAN", "company": "Midland Co", "exchange": "NSD" },
+  {
+    "symbol": "MBHI",
+    "company": "Midwest Banc Holdings Inc",
+    "exchange": "NSD"
+  },
+  {
+    "symbol": "OSKY",
+    "company": "Midwestone Financial Group Inc",
+    "exchange": "NSD"
+  },
+  { "symbol": "MITY", "company": "Mity Enterprises Inc", "exchange": "NSD" },
+  { "symbol": "MIVA", "company": "MIVA Inc", "exchange": "NSD" },
+  { "symbol": "MKSI", "company": "MKS Instruments Inc", "exchange": "NSD" },
+  {
+    "symbol": "PGEB",
+    "company": "ML 97% Prtcd Nts Lnk Glbl Eqty",
+    "exchange": "NSD"
+  },
+  {
+    "symbol": "PDNT",
+    "company": "ML 97% Prtctd Nts DJIA 3/28/11",
+    "exchange": "NSD"
+  },
+  { "symbol": "MTSP", "company": "ML S&P 500 MITTS", "exchange": "NSD" },
+  { "symbol": "MITT", "company": "ML S&P 500 Mitts", "exchange": "NSD" },
+  {
+    "symbol": "MSPX",
+    "company": "ML S&P 500 MITTS Lnk July 2010",
+    "exchange": "NSD"
+  },
+  {
+    "symbol": "TSRA",
+    "company": "Tessera Technologies Inc",
+    "exchange": "NSD"
+  },
+  {
+    "symbol": "TEVA",
+    "company": "Teva Pharmaceutical Industries",
+    "exchange": "NSD"
+  },
+  {
+    "symbol": "TCBI",
+    "company": "Texas Capital Bancshares Inc",
+    "exchange": "NSD"
+  },
+  {
+    "symbol": "TXUI",
+    "company": "Texas Industrial Group Inc",
+    "exchange": "NSD"
+  },
+  {
+    "symbol": "TRBS",
+    "company": "Texas Regional Bancshares",
+    "exchange": "NSD"
+  },
+  { "symbol": "TXRH", "company": "Texas Roadhouse Inc", "exchange": "NSD" },
+  {
+    "symbol": "UCTT",
+    "company": "Ultra Clean Holdings Inc",
+    "exchange": "NSD"
+  },
+  { "symbol": "ULBI", "company": "Ultralife Batteries Inc", "exchange": "NSD" },
+  { "symbol": "UTEK", "company": "Ultratech Inc", "exchange": "NSD" },
+  { "symbol": "GOOG", "company": "Google Inc", "exchange": "NSD" },
+  { "symbol": "INTL", "company": "Inter Tel Inc", "exchange": "NSD" }
+]

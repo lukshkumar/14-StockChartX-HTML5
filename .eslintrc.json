@@ -1,0 +1,85 @@
+{
+  "extends": ["eslint:all", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "jQuery": true
+  },
+  "rules": {
+    "capitalized-comments": [
+      "error",
+      "always",
+      {
+        "ignorePattern": "region|endregion|noinspection|@if|@endif"
+      }
+    ],
+    "quotes": "off",
+    "one-var": "off",
+    "arrow-body-style": ["error", "as-needed"],
+    "dot-location": ["error", "property"],
+    "quote-props": ["error", "as-needed"],
+    "sort-keys": "off",
+    "func-style": "off",
+    "space-before-function-paren": ["error", "never"],
+    "padded-blocks": ["error", "never"],
+    "curly": ["error", "multi-or-nest", "consistent"],
+    "no-magic-numbers": [
+      "error",
+      {
+        "ignoreArrayIndexes": true
+      }
+    ],
+    "newline-after-var": "off",
+    "sort-vars": "off",
+    "no-eq-null": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
+    ],
+    "eqeqeq": ["error", "smart"],
+    "arrow-parens": ["error", "as-needed"],
+    "object-curly-newline": "off",
+    "no-ternary": "off",
+    "no-process-env": "off",
+    "lines-around-comment": [
+      "error",
+      {
+        "allowBlockStart": true,
+        "allowObjectStart": true
+      }
+    ],
+    "no-plusplus": "off",
+    "linebreak-style": "off",
+    "max-lines": "off",
+    "max-statements": [
+      "error",
+      15,
+      {
+        "ignoreTopLevelFunctions": true
+      }
+    ],
+    "id-length": "off",
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": true
+      }
+    ],
+    "no-extra-parens": [
+      "error",
+      "all",
+      {
+        "nestedBinaryExpressions": false
+      }
+    ]
+  }
+}

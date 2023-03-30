@@ -1,0 +1,145 @@
+/* Trend drawings */
+
+.scxToolbarTrendDrawings {
+
+  .scxToolbarButton-activateBtn {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      margin: 0;
+      pointer-events: none;
+      padding-right: 7px;
+      padding-top: 4px;
+    }
+
+    &[data-scxvalue="trendChannel"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-trend-channel;
+      }
+    }
+
+    &[data-scxvalue="andrewsPitchfork"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-andrew-pitchfork;
+      }
+    }
+
+    &[data-scxvalue="errorChannel"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-error-channel;
+      }
+    }
+
+    &[data-scxvalue="raffRegression"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-raff-regression;
+      }
+    }
+
+    &[data-scxvalue="quadrantLines"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend  .icon-drawing-quadrant-lines;
+      }
+    }
+
+    &[data-scxvalue="tironeLevels"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-tirone-levels;
+      }
+    }
+
+    &[data-scxvalue="speedLines"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-speed-lines;
+      }
+    }
+
+    &[data-scxvalue="gannFan"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-gann-fan;
+      }
+    }
+
+    &[data-scxvalue="trendAngle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-trend-angle;
+      }
+    }
+
+  }
+
+  &.activated {
+    .scxToolbarButton-activateBtn {
+      .scxToolbarButton-dropdownElement-image {
+        color: $defaultBorderColorActivated;
+      }
+    }
+  }
+
+  .scxToolbarButton-dropdownElement {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      padding-top: 4px;
+      text-align: center;
+    }
+
+    &[data-scxvalue="trendChannel"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-trend-channel;
+      }
+    }
+
+    &[data-scxvalue="andrewsPitchfork"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-andrew-pitchfork;
+      }
+    }
+
+    &[data-scxvalue="errorChannel"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-error-channel;
+      }
+    }
+
+    &[data-scxvalue="raffRegression"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-raff-regression;
+      }
+    }
+
+    &[data-scxvalue="quadrantLines"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend  .icon-drawing-quadrant-lines;
+      }
+    }
+
+    &[data-scxvalue="tironeLevels"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-tirone-levels;
+      }
+    }
+
+    &[data-scxvalue="speedLines"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-speed-lines;
+      }
+    }
+
+    &[data-scxvalue="gannFan"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-gann-fan;
+      }
+    }
+
+    &[data-scxvalue="trendAngle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-trend-angle;
+      }
+    }
+  }
+}

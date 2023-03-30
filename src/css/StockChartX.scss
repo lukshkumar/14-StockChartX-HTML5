@@ -1,0 +1,45 @@
+@import "scx/vars";
+@import "scx/fonts";
+@import "scx/utils";
+@import "scx/icons";
+@import "scx/modules/core/ChartContainer";
+@import "scx/modules/core/Watermark";
+@import "scx/modules/core/ChartPanel";
+@import "scx/modules/core/CrossHair";
+@import "scx/modules/core/Navigation";
+@import "scx/modules/core/WaitingBar";
+
+.scxUnSelective {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.scxBackground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Date scales */
+
+.scxDateScale {
+  position: absolute;
+}
+
+/* Chart panels */
+
+.scxPanelsContainer {
+  position: absolute;
+}
+
+.scxPanelSplitter {
+  position: absolute;
+}
+
+.scxValueScale {
+  position: absolute;
+}

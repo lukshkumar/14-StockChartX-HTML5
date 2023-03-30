@@ -1,0 +1,144 @@
+/* Chart marker drawings */
+
+.scxToolbarMarkerDrawings {
+
+  .scxToolbarButton-activateBtn {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      margin: 0;
+      pointer-events: none;
+      padding-right: 7px;
+      padding-top: 4px;
+    }
+
+    &[data-scxValue="dot"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-dot;
+      }
+    }
+
+    &[data-scxValue="square"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-square;
+      }
+    }
+
+    &[data-scxValue="diamond"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-diamond;
+      }
+    }
+
+    &[data-scxValue="arrowUp"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-arrow-up;
+      }
+    }
+
+    &[data-scxValue="arrowDown"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-arrow-down;
+      }
+    }
+
+    &[data-scxValue="arrowLeft"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-arrow-left;
+      }
+    }
+
+    &[data-scxValue="arrowRight"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-arrow-right;
+      }
+    }
+
+    &[data-scxValue="arrow"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-arrow;
+      }
+    }
+
+    &[data-scxValue="note"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-note;
+      }
+    }
+  }
+
+  &.activated {
+    .scxToolbarButton-activateBtn {
+      .scxToolbarButton-dropdownElement-image {
+        color: $defaultBorderColorActivated;
+      }
+    }
+  }
+
+  .scxToolbarButton-dropdownElement {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      padding-top: 4px;
+      text-align: center;
+    }
+
+    &[data-scxValue="dot"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-dot;
+      }
+    }
+
+    &[data-scxValue="square"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-square;
+      }
+    }
+
+    &[data-scxValue="diamond"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-diamond;
+      }
+    }
+
+    &[data-scxValue="arrowUp"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-arrow-up;
+      }
+    }
+
+    &[data-scxValue="arrowDown"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-arrow-down;
+      }
+    }
+
+    &[data-scxValue="arrowLeft"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-arrow-left;
+      }
+    }
+
+    &[data-scxValue="arrowRight"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-arrow-right;
+      }
+    }
+
+    &[data-scxValue="arrow"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-arrow;
+      }
+    }
+
+    &[data-scxValue="note"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-note;
+      }
+    }
+  }
+}

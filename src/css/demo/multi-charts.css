@@ -1,0 +1,14 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+.scxActiveBorder {
+  border: 1px solid orange; }
+
+.scxNonActiveBorder {
+  border: 1px solid black; }
+
+#footer {
+  display: none; }

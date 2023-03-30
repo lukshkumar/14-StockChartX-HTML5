@@ -1,0 +1,11 @@
+/*
+ *  This is auto-generated file. Do not edit it manually! It will be overwritten on next build.
+ *  You should edit /templates/StockChartXTests.jstd file if you need to change references.
+ */
+
+load:
+    # inject:js
+    # endinject
+
+test:
+    - tests/**/*.js

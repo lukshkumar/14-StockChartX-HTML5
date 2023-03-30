@@ -1,0 +1,480 @@
+/* Drawing dialog */
+
+#scxDrawingDialog {
+
+  @media (min-width: 1px) {
+
+    .modal-dialog {
+      width: 20em;
+
+      .modal-content {
+
+        .modal-body {
+          padding: 0.7em;
+          padding-top: 0 !important;
+        }
+
+        .scxDrawingDialog-body {
+
+          .scxTabs {
+            margin-bottom: 1.2em;
+          }
+
+          .scxFontDropdown {
+            width: 11.3em;
+            margin-bottom: 5px;
+          }
+
+          #scxDrawingDialog_input_textFont {
+            width: 10.3em;
+          }
+
+          #scxDrawingDialog_panel_figure {
+
+            .scxLineStyleSelector {
+              width: 8.05em;
+            }
+
+            #scxDrawingDialog_input_lineWidth,
+            #scxDrawingDialog_input_arcWidth,
+            #scxDrawingDialog_input_horizontalLineWidth {
+              width: 3.2857em;
+            }
+
+            #scxDrawingDialog_panel_figure_lineEnabled {
+              margin-left: 0;
+              margin-top: 0.41633em;
+            }
+
+            .scxLabelFont {
+              width: 8.5em;
+              margin-top: 5px;
+            }
+
+            #scxDrawingDialog_input_labelSize + .bootstrap-select {
+              margin-top: 5px;
+            }
+          }
+
+          #scxDrawingDialog_panel_magnetTo_selector {
+            .scxMagnetSelector {
+              width: 8.55em;
+            }
+
+            .scxMagnetSelector .scx_switchery {
+              margin-top: 5px;
+            }
+          }
+
+          #scxDrawingDialog_input_lineStyle {
+
+            & + .bootstrap-select {
+
+              &.btn-group {
+
+                .btn {
+
+                  .caret {
+                    right: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .scxCoordinate-input {
+      width: 6.61em;
+      text-align: center;
+    }
+
+    .scxCoordinateTable tr td:first-child {
+      vertical-align: bottom !important;
+      padding-right: 7px !important;
+      padding-bottom: 16px !important;
+    }
+
+    .scxCoordinateTable tr td:nth-child(2) {
+      width: 12em !important;
+      .scxCoordinate-input {
+        width: 12em !important;
+      }
+    }
+
+    .scxCoordinate-datetimepicker {
+      text-align: center;
+      width: 12em;
+    }
+
+    .scxCoordinate-type-container {
+      text-align: center;
+      margin-bottom: 2px;
+
+      .scxCoordinate-type-item:not(:last-child) {
+        border-right: 1px solid rgb(98, 98, 98);
+      }
+    }
+
+    .scxCoordinate-type-item {
+      display: inline-block;
+      padding: 0 4px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &.active {
+        color: rgba(255, 65, 65, 0.8);
+      }
+    }
+  }
+
+  @media (min-width: 400px) {
+
+    .modal-dialog {
+      width: 32em;
+
+      .modal-content {
+
+        .modal-body {
+          padding: 1.2em;
+        }
+
+        .scxDrawingDialog-body {
+
+          .scxFontDropdown {
+            width: 11.4333em;
+            margin-bottom: 0;
+          }
+
+          #scxDrawingDialog_input_textFont {
+            width: 6.3333em;
+          }
+
+          #scxDrawingDialog_panel_figure {
+
+            .scxLineStyleSelector {
+              width: 10.75em;
+            }
+
+            #scxDrawingDialog_input_lineWidth,
+            #scxDrawingDialog_input_arcWidth,
+            #scxDrawingDialog_input_horizontalLineWidth {
+              width: 4.2857em;
+            }
+
+            #scxDrawingDialog_panel_figure_lineEnabled {
+              margin-left: 0.416639em;
+              margin-top: 0;
+            }
+
+            #scxDrawingDialog_input_labelSize + .bootstrap-select {
+              margin-top: 0;
+            }
+
+            .scxLabelFont {
+              margin-top: 0;
+            }
+          }
+
+          #scxDrawingDialog_input_lineStyle {
+
+            & + .bootstrap-select {
+
+              &.btn-group {
+
+                .btn {
+
+                  .caret {
+                    right: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    
+    .modal-dialog {
+      width: 50em;
+
+      .modal-content {
+
+        .modal-body {
+          padding: 1.2em;
+        }
+
+        .scxDrawingDialog-body {
+
+          .scxFontDropdown {
+            width: 13.3em;
+            margin-bottom: 0;
+          }
+
+          #scxDrawingDialog_input_textFont {
+            width: 13.3em;
+          }
+
+          #scxDrawingDialog_panel_figure {
+
+            .scxLineStyleSelector {
+              width: 13.75em;
+            }
+
+            #scxDrawingDialog_input_lineWidth,
+            #scxDrawingDialog_input_arcWidth,
+            #scxDrawingDialog_input_horizontalLineWidth {
+              width: 4.2857em;
+            }
+
+            #scxDrawingDialog_panel_figure_lineEnabled {
+              margin-left: 0.416639em;
+              margin-top: 0;
+            }
+
+            #scxDrawingDialog_input_labelSize + .bootstrap-select {
+              margin-top: 0;
+            }
+
+            .scxLabelFont {
+              width: 11.3em;
+              margin-top: 0;
+            }
+          }
+
+          #scxDrawingDialog_input_lineStyle {
+
+            & + .bootstrap-select {
+
+              &.btn-group {
+
+                .btn {
+
+                  .caret {
+                    right: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .scxDrawingDialog-body {
+
+    label {
+
+      &.disabled {
+        color: $defaultDisabledElementColor !important;
+      }
+    }
+
+    #scxDrawingDialog_panel_figure {
+      @include dialogsPanelFigure();
+
+      table {
+        width: auto;
+      }
+    }
+
+    #scxDrawingDialog_panel_figure_linePanel {
+
+      td {
+
+        &:last-child {
+
+          & > * {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    #scxDrawingDialog_input_labelText {
+      display: inline-block;
+      margin-right: 0.5em;
+      width: 3.1em;
+      text-align: center;
+      height: 33px;
+    }
+
+    #scxDrawingDialog_input_labelFont {
+      width: 6.3em;
+    }
+
+    #scxDrawingDialog_input_labelSize + .bootstrap-select {
+      width: 5em;
+      margin: 0;
+    }
+
+    #scxDrawingDialog_panel_image {
+      width: 100%;
+
+      td {
+
+        &:first-child {
+          width: 8%;
+        }
+
+        & > * {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .scxDrawingDialog_imagePreviewWrapper {
+      background: $defaultInputBackgroundColor center no-repeat;
+      border: 1px solid $defaultDropdownBtnBorderColor;
+    }
+
+
+    #scxDrawingDialog_panel_text {
+      width: 100%;
+
+      td {
+
+        &:first-child {
+          width: 25%;
+        }
+      }
+
+      .scxControls {
+
+        > .sp-replacer {
+          margin-top: 0.4167em;
+        }
+
+        > .font-select {
+          margin-top: 0;
+        }
+      }
+    }
+
+    #scxDrawingDialog_input_text {
+      background-color: $defaultInputBackgroundColor;
+      color: $defaultToolbarTextColor;
+      border-color: $defaultDropdownBtnBorderColor;
+    }
+
+    #scxDrawingDialog_input_lineStyle {
+
+      &:disabled {
+
+        & + .bootstrap-select {
+          background-color: $defaultDropdownDisabledColor;
+        }
+      }
+
+      & + .bootstrap-select {
+        width: 13.75em;
+        margin: 0;
+      }
+    }
+
+    #scxDrawingDialog_input_lineWidth,
+    #scxDrawingDialog_input_arcWidth,
+    #scxDrawingDialog_input_horizontalLineWidth {
+      display: inline-block;
+      width: 4.28572em;
+    }
+
+    #scxDrawingDialog_input_textSize + .bootstrap-select {
+      width: 5em;
+      margin: 0;
+    }
+
+    .scxLabelFont {
+      width: 11.3em;
+      margin-top: 0;
+    }
+
+    #scxDrawingDialog_input_text {
+      height: 14.2859em;
+      width: 100%;
+      resize: none;
+    }
+
+    #scxDrawingDialog_input_imageURL {
+      width: 100%;
+    }
+
+    .scxDrawingDialog_imagePreviewWrapper {
+      max-height: 100%;
+      max-width: 100%;
+      width: 100%;
+      height: 21.4287em;
+      padding: 0.1429em;
+      overflow: hidden;
+      position: relative;
+
+      &.scxHasBg {
+        background-image: url("#{$imgPath}/NoImage.png") !important;
+      }
+
+      &.scxLoading {
+        background-image: url("#{$imgPath}/Loading_16x16.gif") !important;
+      }
+    }
+
+    #scxDrawingDialog_imagePreview {
+      max-height: inherit;
+      max-width: inherit;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%)
+    }
+
+    .scxLineStyleSelector {
+
+      &:active {
+        background-color: #000000;
+      }
+    }
+
+    .scxDrawingDialog_textStyles {
+
+      label {
+        &.scxDrawingDialog_label_textBold {
+          background-image: url("#{$imgPath}/TextBold24White.png");
+
+          &.active {
+            background-image: url("#{$imgPath}/TextBold24.png");
+          }
+        }
+
+        &.scxDrawingDialog_label_textItalic {
+          background-image: url("#{$imgPath}/TextItalic24White.png");
+
+          &.active {
+            background-image: url("#{$imgPath}/TextItalic24.png");
+          }
+        }
+
+        &.scxDrawingDialog_label_textUndeline {
+          background-image: url("#{$imgPath}/TextUnderline24White.png");
+
+          &.active {
+            background-image: url("#{$imgPath}/TextUnderline24.png");
+          }
+        }
+      }
+    }
+  }
+
+  #scxDrawingDialog_btn_resetToDefaults {
+    float: left;
+
+    @media screen and (max-width: 400px) {
+      float: none;
+    }
+  }
+}

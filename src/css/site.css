@@ -1,0 +1,332 @@
+body {
+  background-color: #000;
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+body.scxThemeLight {
+  background-color: #fff;
+}
+
+body.scxThemeBeet {
+  background-color: #683857;
+}
+
+body.scxThemeCyan {
+  background-color: #688896;
+}
+
+body.scxThemeGray {
+  background-color: #595959;
+}
+
+body.scxThemeOlive {
+  background-color: #678e4c;
+}
+
+body.scxThemeOrange {
+  background-color: #ae5649;
+}
+
+body.scxThemePurple {
+  background-color: #856899;
+}
+
+body.scxThemeSky {
+  background-color: #3d85a5;
+}
+
+body.scxThemeTeal {
+  background-color: #4d8985;
+}
+
+#chartContainer {
+  display: inline-block;
+  text-align: center;
+}
+
+.scxContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer {
+  text-align: center;
+  padding-top: 30px;
+  min-width: 768px;
+  width: 100%;
+  display: inline-block;
+}
+
+.logInDialog {
+  text-align: center;
+  padding-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 400px;
+}
+
+#scxLogInError {
+  color: red;
+}
+
+.dataFeedDialog {
+  width: 400px;
+  text-align: center;
+  padding-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  display: none;
+}
+
+.demoDialog {
+  margin-top: 75px;
+}
+.demoDialog h2 {
+  margin: 0;
+  color: #cc6170;
+  font-family: "Century Gothic";
+}
+.demoDialog ul {
+  list-style: none;
+  padding: 0;
+}
+.demoDialog a {
+  display: inline-block;
+  padding: 5px 0 0;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+
+  color: #fff;
+  font-size: 25px;
+  font-family: "Century Gothic";
+}
+.demoDialog a:hover {
+  border-bottom: 2px dotted #cc6170;
+  transition: all 1s ease;
+}
+@media screen and (max-width: 500px) {
+  .demoDialog h2 {
+    font-size: 24px;
+  }
+  .demoDialog a {
+    font-size: 18px;
+  }
+
+  #chartContainer.scxRootContainer {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  #chartContainer.scxFullWindow {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+}
+
+#chartContainer.scxFullWindow + #footer {
+  display: none;
+}
+
+#chartContainer.scxFullWindow + #recreationBtnContainer {
+  display: none;
+}
+
+#footer .logo {
+  height: 107px;
+  width: 458px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#footer .logoTitle {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  font-family: "Century Gothic";
+}
+
+#footer .mainTitle {
+  font-size: 48px;
+  display: inline-block;
+  margin: 0;
+  height: 60px;
+  color: #9b9b9b;
+}
+
+#footer .organizationMark {
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 12px;
+  color: #9b9b9b;
+}
+
+#footer .textSeparator {
+  width: 100%;
+  height: 3px;
+  background-color: #555555;
+}
+
+#footer .secondaryText {
+  font-size: 22px;
+  margin: 0;
+  color: #6e6e6e;
+}
+
+#footer .logoImg {
+  height: 107px;
+  width: 147px;
+  display: inline-block;
+  background: transparent url("../img/scx-logo-light-without-text.png")
+    no-repeat;
+}
+
+/*Theme Light*/
+body.scxThemeLight #footer .mainTitle,
+body.scxThemeLight #footer .organizationMark {
+  color: #646464;
+}
+
+body.scxThemeLight #footer .textSeparator {
+  background-color: #7d7d7d;
+}
+
+body.scxThemeLight #footer .secondaryText,
+body.scxThemeLight #footer .copyright {
+  color: #7d7d7d;
+}
+
+/*Theme Cyan*/
+body.scxThemeCyan #footer .mainTitle,
+body.scxThemeCyan #footer .organizationMark {
+  color: #e3e3e3;
+}
+
+body.scxThemeCyan #footer .textSeparator {
+  background-color: #c8c8c8;
+}
+
+body.scxThemeCyan #footer .secondaryText,
+body.scxThemeCyan #footer .copyright {
+  color: #c8c8c8;
+}
+
+/*Theme Beet*/
+body.scxThemeBeet #footer .mainTitle,
+body.scxThemeBeet #footer .organizationMark {
+  color: #e3e3e3;
+}
+
+body.scxThemeBeet #footer .textSeparator {
+  background-color: #c8c8c8;
+}
+
+body.scxThemeBeet #footer .secondaryText,
+body.scxThemeBeet #footer .copyright {
+  color: #c8c8c8;
+}
+
+/*Theme Grey*/
+body.scxThemeGray #footer .mainTitle,
+body.scxThemeGray #footer .organizationMark {
+  color: #e3e3e3;
+}
+
+body.scxThemeGray #footer .textSeparator {
+  background-color: #c8c8c8;
+}
+
+body.scxThemeGray #footer .secondaryText,
+body.scxThemeGray #footer .copyright {
+  color: #c8c8c8;
+}
+
+/*Theme Olive*/
+body.scxThemeOlive #footer .mainTitle,
+body.scxThemeOlive #footer .organizationMark {
+  color: #e3e3e3;
+}
+
+body.scxThemeOlive #footer .textSeparator {
+  background-color: #c8c8c8;
+}
+
+body.scxThemeOlive #footer .secondaryText,
+body.scxThemeOlive #footer .copyright {
+  color: #c8c8c8;
+}
+
+/*Theme Orange*/
+body.scxThemeOrange #footer .mainTitle,
+body.scxThemeOrange #footer .organizationMark {
+  color: #eeeeee;
+}
+
+body.scxThemeOrange #footer .textSeparator {
+  background-color: #d9d9d9;
+}
+
+body.scxThemeOrange #footer .secondaryText,
+body.scxThemeOrange #footer .copyright {
+  color: #d9d9d9;
+}
+
+/*Theme Purple*/
+body.scxThemePurple #footer .mainTitle,
+body.scxThemePurple #footer .organizationMark {
+  color: #e3e3e3;
+}
+
+body.scxThemePurple #footer .textSeparator {
+  background-color: #c8c8c8;
+}
+
+body.scxThemePurple #footer .secondaryText,
+body.scxThemePurple #footer .copyright {
+  color: #c8c8c8;
+}
+
+/*Theme Sky*/
+body.scxThemeSky #footer .mainTitle,
+body.scxThemeSky #footer .organizationMark {
+  color: #eeeeee;
+}
+
+body.scxThemeSky #footer .textSeparator {
+  background-color: #d9d9d9;
+}
+
+body.scxThemeSky #footer .secondaryText,
+body.scxThemeSky #footer .copyright {
+  color: #d9d9d9;
+}
+
+/*Theme Purple*/
+body.scxThemePurple #footer .mainTitle,
+body.scxThemePurple #footer .organizationMark {
+  color: #e3e3e3;
+}
+
+/*Theme Teal*/
+body.scxThemeTeal #footer .mainTitle,
+body.scxThemeTeal #footer .organizationMark {
+  color: #e3e3e3;
+}
+
+body.scxThemeTeal #footer .textSeparator {
+  background-color: #c8c8c8;
+}
+
+body.scxThemeTeal #footer .secondaryText,
+body.scxThemeTeal #footer .copyright {
+  color: #c8c8c8;
+}
+
+#footer .copyright {
+  font-size: 13px;
+  margin: 10px 0;
+  color: #6e6e6e;
+  font-family: "Century Gothic";
+}

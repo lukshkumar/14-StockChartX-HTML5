@@ -1,0 +1,109 @@
+/* Color picker (Spectrum) */
+
+.scxSpectrum {
+
+  .scxFullScreen & {
+    z-index: $fullScreenZIndex;
+  }
+
+  &.sp-container {
+    border: 1px solid $defaultDropdownBtnBorderColor;
+    background: $defaultBackgroundColor;
+    box-shadow: 0.0834em -0.1667em 0.1667em -0.1667em;
+    font-size: 1em;
+    font-family: inherit;
+
+    .sp-palette-container {
+
+      .sp-palette-button-container{
+
+        .btn-sm {
+          font-size: 1em;
+          font-family: inherit;
+        }
+      }
+    }
+
+    .sp-picker-container {
+
+      .sp-button-container {
+
+        .btn-sm {
+          font-size: 1em;
+          font-family: inherit;
+        }
+      }
+    }
+
+    .sp-palette .sp-thumb-el {
+      border: solid 1px $defaultSpectrumBorderColor;
+    }
+  }
+
+  .sp-picker-container {
+    border-left: 1px solid $defaultDropdownBtnBorderColor;
+  }
+
+  .sp-palette-container {
+    border-right: 0;
+  }
+
+  .sp-color {
+    border: 1px solid $defaultSpectrumBorderColor;
+  }
+
+  .sp-cancel {
+    margin-right: 0.4167em;
+  }
+
+  .sp-button-container {
+    margin-top: 2.0334em;
+  }
+
+  .sp-hue {
+    border: 1px solid $defaultSpectrumBorderColor;
+
+    .sp-slider {
+      border: 1px solid #FFFFFF;
+      background: transparent;
+      opacity: 1;
+    }
+  }
+
+  .sp-initial {
+    border: 1px solid $defaultSpectrumBorderColor;
+  }
+}
+
+.scxDialog {
+
+  .sp-replacer {
+    padding: 0.0834em;
+    border: 1px solid $defaultDropdownBtnBorderColor;
+    background: $defaultBackgroundColor;
+
+    &:hover {
+      border-color: $defaultToolbarBorderColor;
+      background: $defaultBackgroundColor;
+    }
+
+    &.sp-disabled {
+      @include spDisabled($defaultDisabledElementColor);
+
+      .sp-preview-inner {
+        @include spDisabled($defaultDisabledElementColor);
+      }
+    }
+  }
+
+  .sp-preview {
+    margin: 0;
+    width: 1.6666em;
+    height: 1.6666em;
+    border: 0;
+  }
+
+  .sp-dd {
+    display: none;
+  }
+}

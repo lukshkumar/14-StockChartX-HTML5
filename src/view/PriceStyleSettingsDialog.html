@@ -1,0 +1,244 @@
+<div id="scxPriceStyleDialog" class="modal scxDialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a href="#" data-dismiss="modal" aria-hidden="true" class="close">×</a>
+        <h4 id="scxPriceStyleDialog_title">Price Style Dialog</h4>
+      </div>
+      <div class="modal-body scxPriceStyleDialog-body">
+        <div class="scxPriceStyleDialog_panel_ntb_inputsPanel">
+          <table>
+            <tr class="scxPriceStyleDialog_panel_ntb_source">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_source"
+                  data-i18n="priceStyleDialog.source"
+                ></label>
+                <select class="scxPriceStyleDialog_input_source scxDropdown">
+                  <option
+                    value="close"
+                    data-i18n="priceStyleDialog.close"
+                  ></option>
+                  <option
+                    value="highLow"
+                    data-i18n="priceStyleDialog.highLow"
+                  ></option>
+                </select>
+              </td>
+            </tr>
+            <tr class="scxPriceStyleDialog_panel_ntb_boxSizeKind">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_boxSizeKind"
+                  data-i18n="priceStyleDialog.calculationMethod"
+                ></label>
+                <select
+                  class="scxPriceStyleDialog_input_boxSizeKind scxDropdown"
+                >
+                  <option value="atr" data-i18n="priceStyleDialog.ATR"></option>
+                  <option
+                    value="fixed"
+                    data-i18n="priceStyleDialog.fixed"
+                  ></option>
+                  <option
+                    value="points"
+                    data-i18n="priceStyleDialog.points"
+                  ></option>
+                </select>
+              </td>
+            </tr>
+            <tr class="scxPriceStyleDialog_panel_ntb_ATRLength">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_ATRLength"
+                  data-i18n="priceStyleDialog.ATRLength"
+                ></label>
+                <input
+                  class="scxPriceStyleDialog_input_ATRLength form-control"
+                  type="text"
+                />
+              </td>
+            </tr>
+            <tr class="scxPriceStyleDialog_panel_ntb_boxSize">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_boxSize"
+                  data-i18n="priceStyleDialog.boxSize"
+                ></label>
+                <input
+                  class="scxPriceStyleDialog_input_boxSize form-control"
+                  type="text"
+                />
+              </td>
+            </tr>
+            <tr class="scxPriceStyleDialog_panel_ntb_pointsCount">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_boxSize"
+                  data-i18n="priceStyleDialog.pointsCount"
+                ></label>
+                <input
+                  class="scxPriceStyleDialog_input_pointsCount form-control"
+                  type="text"
+                />
+              </td>
+            </tr>
+            <tr class="scxPriceStyleDialog_panel_ntb_reversalAmount">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_reversalAmount"
+                  data-i18n="priceStyleDialog.reversalAmount"
+                ></label>
+                <input
+                  class="scxPriceStyleDialog_input_reversalAmount form-control"
+                  type="text"
+                />
+              </td>
+            </tr>
+            <tr class="scxPriceStyleDialog_panel_ntb_reversalDoubleAmount">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_reversalDoubleAmount"
+                  data-i18n="priceStyleDialog.reversalAmount"
+                ></label>
+                <input
+                  class="scxPriceStyleDialog_input_reversalDoubleAmount form-control"
+                  type="text"
+                />
+              </td>
+            </tr>
+            <tr class="scxPriceStyleDialog_panel_ntb_numberOfLine">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_numberOfLine"
+                  data-i18n="priceStyleDialog.numberOfLine"
+                ></label>
+                <input
+                  class="scxPriceStyleDialog_input_numberOfLine form-control"
+                  type="text"
+                />
+              </td>
+            </tr>
+            <tr class="scxPriceStyleDialog_panel_ntb_barStyle">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_barStyle"
+                  data-i18n="priceStyleDialog.style"
+                ></label>
+                <select class="scxPriceStyleDialog_input_barStyle scxDropdown">
+                  <option
+                    value="bar"
+                    data-i18n="priceStyleDialog.OHLC"
+                  ></option>
+                  <option
+                    value="HLBar"
+                    data-i18n="priceStyleDialog.HL"
+                  ></option>
+                  <option
+                    value="HLCBar"
+                    data-i18n="priceStyleDialog.HLC"
+                  ></option>
+                </select>
+              </td>
+            </tr>
+            <tr class="scxPriceStyleDialog_panel_ntb_coloredBarStyle">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_coloredBarStyle"
+                  data-i18n="priceStyleDialog.style"
+                ></label>
+                <select
+                  class="scxPriceStyleDialog_input_coloredBarStyle scxDropdown"
+                >
+                  <option
+                    value="coloredBar"
+                    data-i18n="priceStyleDialog.OHLC"
+                  ></option>
+                  <option
+                    value="coloredHLBar"
+                    data-i18n="priceStyleDialog.HL"
+                  ></option>
+                  <option
+                    value="coloredHLCBar"
+                    data-i18n="priceStyleDialog.HLC"
+                  ></option>
+                </select>
+              </td>
+            </tr>
+
+            <tr class="scxPriceStyleDialog_panel_ntb_instrumentPriceStyle">
+              <td>
+                <label
+                  class="scxPriceStyleDialog_label_instrumentPriceStyle"
+                  data-i18n="priceStyleDialog.priceStyle"
+                ></label>
+                <select
+                  class="scxPriceStyleDialog_input_instrumentPriceStyle scxDropdown"
+                >
+                  <!-- <option
+                    value="bar"
+                    data-i18n="toolbar.barStyle.bars"
+                  ></option>
+                  <option
+                    value="coloredBar"
+                    data-i18n="toolbar.barStyle.coloredBars"
+                  ></option> -->
+                  <option
+                    value="candle"
+                    data-i18n="toolbar.barStyle.candles"
+                  ></option>
+                  <option
+                    value="hollowCandle"
+                    data-i18n="toolbar.barStyle.hollowCandles"
+                  ></option>
+                  <!-- <option
+                    value="heikinAshi"
+                    data-i18n="toolbar.barStyle.heikinAshi"
+                  ></option> -->
+                  <!-- <option
+                    value="renko"
+                    data-i18n="toolbar.barStyle.renko"
+                  ></option> -->
+                  <!-- <option
+                    value="lineBreak"
+                    data-i18n="toolbar.barStyle.lineBreak"
+                  ></option> -->
+                  <!-- <option
+                    value="kagi"
+                    data-i18n="toolbar.barStyle.kagi"
+                  ></option> -->
+                  <option
+                    value="line"
+                    data-i18n="toolbar.barStyle.line"
+                  ></option>
+                  <option
+                    value="mountain"
+                    data-i18n="toolbar.barStyle.mountain"
+                  ></option>
+                  <!-- <option
+                    value="pointAndFigure"
+                    data-i18n="toolbar.barStyle.pointsAndFigure"
+                  ></option> -->
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer scxPriceStyleDialog-footer">
+        <button
+          type="button"
+          class="btn btn-default"
+          data-dismiss="modal"
+          data-i18n="button.close"
+        ></button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="scxPriceStyleDialog_btn_save"
+          data-i18n="button.save"
+        ></button>
+      </div>
+    </div>
+  </div>
+</div>

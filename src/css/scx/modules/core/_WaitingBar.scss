@@ -1,0 +1,109 @@
+/* Waiting bar */
+
+$waitingBarDotSize: 4px;
+
+@mixin waitingBarDotAnimation($time) {
+  -webkit-animation: scxwbdotmove 2s $time infinite
+    cubic-bezier(0.2, 0.64, 0.81, 0.23);
+  animation: scxwbdotmove 2s $time infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+}
+
+@mixin scxwbdotmove() {
+  0% {
+    left: 0;
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 2;
+    transform: scale(1.5);
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@mixin scxwblabelpulse() {
+  0% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.75;
+  }
+}
+
+@-webkit-keyframes scxwbdotmove {
+  @include scxwbdotmove();
+}
+
+@keyframes scxwbdotmove {
+  @include scxwbdotmove();
+}
+
+@-webkit-keyframes scxwblabelpulse {
+  @include scxwblabelpulse();
+}
+
+@keyframes scxwblabelpulse {
+  @include scxwblabelpulse();
+}
+
+.scxWaitingBarContainer {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $defaultWaitingBarBackgroundColor;
+  -webkit-backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(1.5px);
+  color: $defaultWaitingBarTextColor;
+  overflow: hidden;
+  z-index: 10;
+
+  .scxWaitingBarText {
+    font-size: 1.3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    @include alignCenterXY();
+
+    -webkit-animation: scxwblabelpulse 2s infinite linear;
+    animation: scxwblabelpulse 2s infinite linear;
+  }
+
+  .scxDotsContainer {
+    position: absolute;
+    width: 100%;
+    height: $waitingBarDotSize;
+    top: 55%;
+
+    @include alignCenterY();
+  }
+
+  .scxWaitingBarDot {
+    background-color: $defaultWaitingBarDotColor;
+    width: $waitingBarDotSize;
+    height: $waitingBarDotSize;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+
+    @for $i from 0 through 6 {
+      &:nth-child(#{$i + 1}) {
+        @if $i == 0 {
+          @include waitingBarDotAnimation(null);
+        } @else {
+          @include waitingBarDotAnimation($i * 100ms);
+        }
+      }
+    }
+  }
+}

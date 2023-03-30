@@ -1,0 +1,67 @@
+/* Resizable */
+
+.scxResizable {
+    position: relative;
+
+    .scxResizable-handle {
+        position: absolute;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .scxResizable-l,
+    .scxResizable-r {
+        height: 100%;
+        width: 10px;
+    }
+
+    .scxResizable-l {
+        cursor: w-resize;
+        left: -5px;
+    }
+
+    .scxResizable-r {
+        cursor: e-resize;
+        right: -5px;
+    }
+
+    .scxResizable-t,
+    .scxResizable-b {
+        height: 10px;
+        left: 5px;
+        width: calc(100% - 10px);
+    }
+
+    .scxResizable-t {
+        cursor: n-resize;
+        top: -5px;
+    }
+
+    .scxResizable-b {
+        cursor: s-resize;
+        bottom: -5px;
+    }
+}
+
+.scxResizable-resizing {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.scxResizable-resizing-l {
+    cursor: w-resize;
+}
+
+.scxResizable-resizing-r {
+    cursor: e-resize;
+}
+
+.scxResizable-resizing-t {
+    cursor: n-resize;
+}
+
+.scxResizable-resizing-b {
+    cursor: s-resize;
+}

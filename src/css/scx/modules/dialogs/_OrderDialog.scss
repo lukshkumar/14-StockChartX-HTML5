@@ -1,0 +1,29 @@
+#scxOrderDialog {
+
+  #scxOrderDialog_panel_orderParameters {
+
+    .scxOrderInputField {
+      width: 100%;
+    }
+
+    table {
+      td {
+        width: 6em;
+
+        &.inputField {
+          width: 14em;
+
+        }
+      }
+    }
+
+    .scxCoordinate-datetimepicker {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .modal-dialog {
+    width: 25em;
+  }
+}

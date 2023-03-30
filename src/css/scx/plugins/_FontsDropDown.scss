@@ -1,0 +1,29 @@
+/* Fonts drop down */
+
+.scxFontDropdown {
+  display: inline-block;
+  position: relative;
+
+  select + &.btn-group.bootstrap-select.scxFontDropdown {
+    width: auto;
+  }
+
+  .caret {
+    position: absolute;
+    top: 1.25em;
+    right: 1em;
+    cursor: pointer;
+  }
+
+  .dropdown-menu li > a {
+    padding: 3px 0 3px 10px;
+  }
+
+  .dropdown-toggle {
+    height: 2.36668em;
+    padding: 0 1.6667em 0 0.8em;
+    border-radius: 0.2667em;
+    cursor: pointer;
+    font-size: 1.24992em;
+  }
+}

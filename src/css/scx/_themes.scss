@@ -1,0 +1,38 @@
+/*
+* How to use:
+* 1. Create a file with the appropriate name in the themes folder.
+* 2. Copy and paste variables from one on existing themes.
+* 3. Change values up to your needs.
+* 4. Add here import of your file with variables inside.
+* 5. Then add import of a common template.
+*/
+
+@import "themes/Dark";
+@import "themes/template";
+
+@import "themes/Light";
+@import "themes/template";
+
+@import "themes/Beet";
+@import "themes/template";
+
+@import "themes/Cyan";
+@import "themes/template";
+
+@import "themes/Gray";
+@import "themes/template";
+
+@import "themes/Olive";
+@import "themes/template";
+
+@import "themes/Orange";
+@import "themes/template";
+
+@import "themes/Purple";
+@import "themes/template";
+
+@import "themes/Sky";
+@import "themes/template";
+
+@import "themes/Teal";
+@import "themes/template";

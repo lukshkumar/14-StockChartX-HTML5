@@ -1,0 +1,190 @@
+/* Global dialogs */
+
+@mixin dialogBtn() {
+  padding: 0.4287em 0.8573em;
+  font-size: 1.1666em;
+}
+
+.scxDialog {
+  text-align: left;
+  font-size: 0.857em;
+
+  input {
+
+    &.form-control {
+      font-size: 1.1666em;
+    }
+  }
+
+  .dropdown-menu {
+    border: 1px solid $defaultDropdownBtnBorderColor;
+
+    background-color: $defaultInputBackgroundColor;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.175);
+
+    font-size: 1.0801em;
+
+    @include dropdownMenu();
+  }
+
+  .dropdown-toggle {
+
+    &.selectpicker {
+      border: 1px solid $defaultDropdownBtnBorderColor;
+      outline: rgba(0,0,0,0) !important;
+
+      background-color: $defaultInputBackgroundColor;
+
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+
+      color: $defaultToolbarTextColor;
+
+      &:active {
+        outline: transparent !important;
+        background-color: #000000;
+      }
+
+      li {
+
+        a {
+          outline-color: rgba(0,0,0,0);
+        }
+      }
+    }
+
+    &.btn {
+
+      &:focus {
+        outline: transparent !important;
+      }
+    }
+  }
+
+  .btn-group {
+
+    &:focus {
+      outline: transparent !important;
+    }
+  }
+
+  .modal-dialog {
+
+    .modal-content {
+      background: $defaultBackgroundColor;
+      color: $defaultTextColor;
+
+      .modal-header {
+        border-bottom: 1px solid $defaultDialogDivider;
+
+        & > *:not(a) {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .close {
+          color: #FFFFFF;
+          text-shadow: 0 2px 0 #000000;
+          opacity: .9;
+
+          &:hover {
+            opacity: .3;
+          }
+        }
+      }
+
+      .modal-body {
+        overflow: auto; //Fix issues with overflow elements in "MeasureSettingsDialog" during selection of font family.
+
+        table {
+
+          td {
+            vertical-align: middle;
+            padding: 0.6667em 0.33339em;
+
+            label {
+              font-weight: normal;
+            }
+
+            .sp-replacer {
+              margin-right: 0.5833em;
+            }
+          }
+        }
+
+        input {
+
+          &.form-control {
+            background-color: $defaultInputBackgroundColor;
+            border-color: $defaultDropdownBtnBorderColor;
+            color: $defaultToolbarTextColor;
+
+            &[disabled] {
+              background-color: $defaultDropdownDisabledColor;
+              color: $defaultDisabledTextColor;
+            }
+          }
+        }
+
+        button {
+
+          &.btn {
+            @include dialogBtn();
+          }
+        }
+
+        .scxLineStyleSelector {
+          border-radius: 4px;
+        }
+
+        .scxMagnetSelector {
+          border-radius: 4px;
+        }
+      }
+
+      .modal-footer {
+        border-top: 1px solid $defaultDialogDivider;
+
+        button {
+
+          &.btn {
+            @include dialogBtn();
+            margin-bottom: 5px;
+          }
+        }
+
+        .btn {
+
+          &.active {
+            outline: 0;
+          }
+
+          &:active {
+            @extend .active;
+          }
+        }
+      }
+    }
+  }
+
+  .scxControls {
+
+    & > * {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+
+.scxFullScreen {
+  .modal {
+    z-index: $fullScreenZIndex + 20;
+  }
+  .popover {
+    z-index: $fullScreenZIndex + 60;
+  }
+  > .bootstrap-select.open {
+    z-index: $fullScreenZIndex + 60;
+  }
+}

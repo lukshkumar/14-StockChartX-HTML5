@@ -1,0 +1,210 @@
+/* Price style */
+
+.scxToolbarBarStyle {
+
+  .scxToolbarButton-activateBtn {
+
+    margin-left: -1px;
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      margin: 0;
+      pointer-events: none;
+      padding-right: 8px;
+      padding-left: 2px;
+      padding-top: 2px;
+    }
+
+    &[data-scxvalue="bar"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-bar;
+      }
+    }
+
+    &[data-scxvalue="coloredBar"] {
+      .scxToolbarButton-dropdownElement-image {
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        .coloredbar-1,
+        .coloredbar-2 {
+          display: inline-table;
+          position: absolute;
+          margin: 0;
+          padding: 0 15px 0 0;
+          top: 5px;
+          left: 4px;
+        }
+
+        .coloredbar-1 {
+          @extend .icon-pricestyle-coloredbar-1;
+          color: #42d042;
+        }
+
+        .coloredbar-2 {
+          @extend .icon-pricestyle-coloredbar-2;
+          color: #ff6d6d;
+        }
+      }
+    }
+
+    &[data-scxvalue="candle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-candle;
+      }
+    }
+
+    &[data-scxvalue="hollowCandle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-hollowcandle;
+      }
+    }
+
+    &[data-scxvalue="heikinAshi"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-heikinashi;
+      }
+    }
+
+    &[data-scxvalue="renko"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-renko;
+      }
+    }
+
+    &[data-scxvalue="lineBreak"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-linebreak;
+      }
+    }
+
+    &[data-scxvalue="kagi"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-kagi;
+      }
+    }
+
+    &[data-scxvalue="line"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-line;
+      }
+    }
+
+    &[data-scxvalue="mountain"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-mountain;
+      }
+    }
+
+    &[data-scxvalue="pointAndFigure"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-pf;
+      }
+    }
+  }
+
+  .scxToolbarButton-dropdownElement.active {
+    .scxToolbarButton-dropdownElement-image {
+      color: black;
+    }
+  }
+
+  .scxToolbarButton-dropdownElement {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      padding-top: 4px;
+      text-align: center;
+    }
+
+    &[data-scxvalue="bar"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-bar;
+      }
+    }
+
+    &[data-scxvalue="coloredBar"] {
+
+      .scxToolbarButton-dropdownElement-image {
+        position: relative;
+
+        .coloredbar-1,
+        .coloredbar-2 {
+          display: inline-table;
+          position: absolute;
+          top: 5px;
+          left: 7px;
+        }
+
+        .coloredbar-1 {
+          @extend .icon-pricestyle-coloredbar-1;
+          color: #42d042;
+        }
+
+        .coloredbar-2 {
+          @extend .icon-pricestyle-coloredbar-2;
+          color: #ff6d6d;
+        }
+      }
+    }
+
+    &[data-scxvalue="candle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-candle;
+      }
+    }
+
+    &[data-scxvalue="hollowCandle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-hollowcandle;
+      }
+    }
+
+    &[data-scxvalue="heikinAshi"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-heikinashi;
+      }
+    }
+
+    &[data-scxvalue="renko"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-renko;
+      }
+    }
+
+    &[data-scxvalue="lineBreak"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-linebreak;
+      }
+    }
+
+    &[data-scxvalue="kagi"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-kagi;
+      }
+    }
+
+    &[data-scxvalue="line"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-line;
+      }
+    }
+
+    &[data-scxvalue="mountain"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-mountain;
+      }
+    }
+
+    &[data-scxvalue="pointAndFigure"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-pricestyle-pf;
+      }
+    }
+  }
+}

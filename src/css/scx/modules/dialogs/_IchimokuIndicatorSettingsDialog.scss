@@ -1,0 +1,186 @@
+/*Ichimoku Indicator Dialog */
+
+#scxIchimokuIndicatorDialog {
+
+  @media (min-width: 1px) {
+
+    .modal-dialog {
+      width: 20em;
+
+      .modal-content {
+
+        .scxIchimokuIndicatorDialog-body {
+
+          .scxIchimokuIndicatorDialog_label {
+            width: 4em;
+            vertical-align: middle;
+          }
+
+          .scxLineStyleSelector {
+            width: 14.5em;
+          }
+        }
+      }
+    }
+
+  }
+
+  @media (min-width: 400px) {
+
+    .modal-dialog {
+      width: 32em;
+
+      .modal-content {
+
+        .scxIchimokuIndicatorDialog-body {
+
+          .scxIchimokuIndicatorDialog_label {
+            width: 5em;
+            vertical-align: middle;
+          }
+
+          .scxLineStyleSelector {
+            width: 7.99em;
+          }
+        }
+      }
+    }
+
+  }
+
+  @media (min-width: 768px) {
+
+    .modal-dialog {
+      width: 38em;
+
+      .modal-content {
+
+        .scxIchimokuIndicatorDialog-body {
+
+          .scxIchimokuIndicatorDialog_label {
+            width: 6em;
+            vertical-align: middle;
+          }
+
+          .scxLineStyleSelector {
+            width: 13.75em;
+          }
+        }
+      }
+    }
+
+  }
+
+  .scxIchimokuIndicatorDialog-body {
+    height: 38em;
+    overflow: auto;
+    padding: 1em;
+
+    table {
+
+      td {
+
+        .sp-replacer {
+          margin: 0 0.5833em;
+        }
+      }
+    }
+
+    .scxLineStyleSelector,
+    .scxIchimokuIndicatorDialog_input_scalePosition{
+      margin: 0 0.5833em;
+      width: 12.75em;
+    }
+
+    .scxIchimokuIndicatorDialog_input_text {
+      background-color: $defaultInputBackgroundColor;
+      color: $defaultToolbarTextColor;
+      border-color: $defaultDropdownBtnBorderColor;
+    }
+
+    .scxIchimokuIndicatorDialog_input_lineStyle,
+    .scxIchimokuIndicatorDialog_input_scalePosition {
+
+      &:disabled {
+
+        & + .bootstrap-select {
+          background-color: $defaultDropdownDisabledColor;
+        }
+      }
+    }
+
+    .scxIchimokuIndicatorDialog_input_lineWidth {
+      display: inline-block;
+      width: 3.65572em;
+      vertical-align: middle;
+    }
+
+    .scxIchimokuIndicatorDialog_input_conversionLinePeriods,
+    .scxIchimokuIndicatorDialog_input_baseLinePeriods,
+    .scxIchimokuIndicatorDialog_input_laggingSpanPeriods {
+      display: inline-block;
+      width: 10.65572em;
+    }
+
+    .scxIchimokuIndicatorDialog_panel_figure_inputsPanel {
+      @include dialogsPanelFigure();
+    }
+
+    .scxIchimokuIndicatorDialog_panel_figure_inputsPanel,
+    .scxIchimokuIndicatorDialog_panel_figure_linesStylePanel {
+
+      td {
+
+        &:last-child {
+
+          & > * {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .scxIchimokuIndicatorDialog_label {
+      padding-left: 0.3em;
+      margin: 0.5em 0;
+      width: 8em;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .scxIchimokuIndicatorDialog_label_conversionLinePeriods,
+    .scxIchimokuIndicatorDialog_label_baseLinePeriods,
+    .scxIchimokuIndicatorDialog_label_laggingSpanPeriods {
+      padding-left: 0.3em;
+      width: 12em;
+    }
+
+    .scxIchimokuIndicatorDialog_label_priceLine {
+      padding-left: 0.3em;
+    }
+
+    .scxNumericField-arrowWrapper {
+      background: transparent;
+      border-left: 0;
+      padding-top: 0 !important;
+    }
+
+    .scxNumericField-arrowDown {
+      right: 1px;
+      margin-top: 12px;
+
+      .scxNumericFieldArrow {
+        border-width: 4px 4px 0 4px;
+      }
+    }
+
+    .scxNumericField-arrowUp {
+      right: 1px;
+      margin-top: 1px;
+
+      .scxNumericFieldArrow {
+        border-width: 0 4px 4px 4px;
+      }
+    }
+  }
+}

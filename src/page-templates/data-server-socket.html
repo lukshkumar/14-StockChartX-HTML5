@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title>StockChartX Web & Mobile</title>
+
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet" />
+    <% } %>
+    <link href="css/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="scxThemeDark">
+    <div id="chartContainer"></div>
+
+    <div id="footer">
+      <a
+        class="logo"
+        title="StockChartX Web & Mobile"
+        href="http://www.modulusglobal.com/products/web-mobile-stock-chart-library/stockchartx-web-mobile/"
+      ></a>
+    </div>
+
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) {
+    if(chunk.includes("StockChartX")){ %>
+    <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } }%>
+    <script src="scripts/custom-indicator.js"></script>
+    <script src="scripts/chart-constructor.js"></script>
+    <script src="scripts/data-server-socket.js"></script>
+  </body>
+</html>

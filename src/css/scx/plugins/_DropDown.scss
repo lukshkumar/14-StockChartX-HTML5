@@ -1,0 +1,23 @@
+.scxDropdown {
+
+  &.bootstrap-select.btn-group:not(.input-group-btn),
+  &.bootstrap-select.btn-group[class*=span] {
+    margin-bottom: 0;
+  }
+
+  .dropdown-menu {
+    background: $defaultInputBackgroundColor;
+    color: $defaultToolbarTextColor;
+    border: 1px solid $defaultDropdownBtnBorderColor;
+    box-shadow: 0 1px 10px rgba(255, 255, 255, 0.175);
+    z-index: 2147483647 !important;
+
+    @include dropdownMenu();
+
+    li a span.text {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}

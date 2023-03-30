@@ -1,0 +1,53 @@
+var datafeed = new StockChartX.CsvDatafeed({
+    urlBuilder: function() {
+      return StockChartX.Environment.isMobile
+        ? "data/aapl-1day.mobile.csv"
+        : "data/aapl-1day.csv";
+    },
+    dateFormat: function() {
+      return "D-MMM-YY";
+    }
+  });
+
+var datafeed = new StockChartX.CsvDatafeed({
+    urlBuilder: function(request) {
+        var instrument = request.instrument || request.chart.instrument;
+
+        return returnUrl(instrument.symbol, request.chart.timeFrame.periodicity);
+    },
+    dateFormat: function() {
+        return 'YYYY-MM-DD hh:mm:ss';
+    }
+  });
+
+function returnUrl(name, period)
+  {
+    var symbol = 'AAPL';
+    var time = StockChartX.Periodicity.DAY;
+
+    switch(name){
+      case 'AAPL':
+      case 'MSFT':
+      case 'GOOG':
+      case 'NQ':
+      case 'SGX':
+        symbol = name;
+      default:
+        break;
+    }
+
+    switch(period){
+      case StockChartX.Periodicity.DAY:
+      case StockChartX.Periodicity.WEEK:
+      case StockChartX.Periodicity.MONTH:
+        time = period;
+        break;
+      case StockChartX.Periodicity.MINUTE:
+        time = '';
+        break;
+      default:
+        break;
+    }
+    
+    return 'data/' + symbol + '-' + time + '.csv';
+  }

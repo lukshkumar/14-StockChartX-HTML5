@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title>Choose Demo Page</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet" />
+    <% } %>
+
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+
+  <body class="scxThemeDark">
+    <div class="demoDialog">
+      <h2 class="demo-title">Choose Demo:</h2>
+      <ul>
+        <li><a href="compare-symbols.html">Compare Symbols</a></li>
+        <li><a href="data-server-socket.html">Data server</a></li>
+        <li><a href="single-chart.html">Single chart</a></li>
+        <li>
+          <a href="multi-charts.html">Multi-charts with shared toolbar</a>
+        </li>
+        <li><a href="two-charts.html">Two charts on the same page</a></li>
+        <li><a href="recreate-chart.html">Recreate chart</a></li>
+        <li><a href="simple-chart.html">Simple chart</a></li>
+      </ul>
+    </div>
+    <div id="footer">
+      <a
+        class="logo"
+        title="StockChartX Web & Mobile"
+        href="http://www.modulusglobal.com/products/web-mobile-stock-chart-library/stockchartx-web-mobile/"
+      >
+        <div class="logoTitle">
+          <p class="mainTitle">StockChartX</p>
+          <p class="organizationMark">&trade;</p>
+          <div class="textSeparator"></div>
+          <p class="secondaryText">Web & Mobile Edition</p>
+        </div>
+        <div class="logoImg"></div>
+      </a>
+      <p class="copyright">
+        Copyright 2014 by Modulus Financial Engineering, Inc.
+      </p>
+    </div>
+  </body>
+</html>

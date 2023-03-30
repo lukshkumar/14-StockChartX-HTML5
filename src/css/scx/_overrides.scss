@@ -1,0 +1,84 @@
+/* Switchery */
+
+.scxDialog {
+
+  .scx_switchery {
+    display: inline-block;
+    height: 1.6666em;
+    width: 2.9166em;
+    position: relative;
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
+    border: 1px solid #DFDFDF;
+    border-radius: 1.6666em;
+
+    background-color: #EAEAEA;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    & > small {
+      height: 1.8627em;
+      width: 1.8627em;
+      position: absolute;
+      top: 0;
+
+      border-radius: 100%;
+
+      background: #FFFFFF;
+      box-shadow: 0 0.0981em 0.2941em rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+.modal-open .modal {
+  overflow: hidden;
+}
+
+.modal-backdrop, .modal-backdrop.in {
+  opacity: 0;
+}
+
+.popover {
+  border: 0;
+
+  background-color: #2B2B2B;
+  box-shadow: 0 0 11px -1px rgba(150, 150, 150, 0.8);
+
+  color: #E6E6E6;
+
+  &.bottom {
+
+    & > .arrow {
+      border-bottom-color: rgba(255,255,255,.3);
+
+      &:after {
+        border-bottom-color: #2B2B2B;
+      }
+    }
+  }
+}
+
+.modal-header.ui-draggable-handle:active {
+  cursor: move;
+}
+
+@media (min-width: 1px) {
+
+  .modal-dialog {
+
+    margin: 5px auto;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .modal-dialog {
+
+    margin: 30px auto;
+  }
+}

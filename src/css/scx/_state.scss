@@ -1,0 +1,17 @@
+.scxInvalidValue {
+  border-color: #B94A48 !important;
+  color: #B94A48 !important;
+
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.0745098) 0 0.0834em 0.0834em 0 inset, #B94A48 0 0 0.6666em 0 !important;
+  }
+}
+
+.scxNoSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;
+}

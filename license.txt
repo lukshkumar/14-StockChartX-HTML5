@@ -1,0 +1,33 @@
+Your license agreement requires the use of the Modulus LicensePing.com licensing mechanism.
+The mechanism monitors the usage and distribution patterns of our intellectual property.
+If the usage or distribution patterns indicate that our licensing mechanism has either
+been removed, altered, tampered with or that our intellectual property may be misused in
+any form, our legal team may initiate contact with you to investigate the matter further.
+
+Removal or modification of this license mechanism by any means whatsoever (editing the code,
+removing the LicensePing.com URL reference, etc.) constitutes willful and criminal copyright
+infringement in addition to giving rise to claims by Modulus Financial Engineering, Inc.
+against you, as the developer, and your company as a whole for, among others:
+
+(1) Copyright Infringement;
+(2) False Designation of Origin;
+(3) Breach of Contract;
+(4) Misappropriation of Trade Secrets;
+(5) Interference with Contract; and
+(6) Interference with Prospective Business Relations.
+
+17 USC � 506 - Criminal offenses
+(a) Criminal Infringement.
+Any person who willfully infringes a copyright shall be punished as provided under section
+2319 of title 18, if the infringement was committed for purposes of commercial advantage
+or private financial gain.
+
+18 USC � 2319 - Criminal infringement of a copyright
+(a) Any person who commits an offense under section 506 (a)(1)(A) of title 17 shall be imprisoned
+not more than 5 years, or fined in the amount set forth in this title (up to $150,000), or both,
+if the offense consists of the reproduction or distribution, including by electronic means, during
+any 180-day period, of at least 10 copies, of 1 or more copyrighted works, which have a total retail
+value of more than $2,500.
+
+For more information, review the license agreement associated with this software and source
+code at http://www.modulusfe.com/support/license.pdf or contact us at legal@modulusfe.com.

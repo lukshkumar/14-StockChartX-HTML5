@@ -1,0 +1,45 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true,
+    "jquery": true,
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "StockChartX": true,
+    "TASdk": true,
+    "moment": true,
+    "jQuery": true
+  },
+  "rules": {
+    "no-warning-comments": ["error", { "terms": ["fixme"] }],
+    "capitalized-comments": [
+      "error",
+      "always",
+      {
+        "ignorePattern": "region|endregion|noinspection|registerCustomIndicators|@if|@endif"
+      }
+    ],
+    "no-var": "off",
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allowAfterThis": true
+      }
+    ],
+    "prefer-arrow-callback": "off",
+    "prefer-destructuring": "off",
+    "func-names": ["error", "never"],
+    "vars-on-top": "off",
+    "prefer-template": "off",
+    "object-shorthand": "off",
+    "no-magic-numbers": "off",
+    "no-empty-function": "off",
+    "max-statements": "off",
+    "no-console": "off",
+    "require-jsdoc": "off"
+  }
+}

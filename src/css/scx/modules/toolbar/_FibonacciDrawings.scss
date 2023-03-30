@@ -1,0 +1,115 @@
+/* Fibonacci drawings */
+
+.scxToolbarFibonacciDrawings {
+
+  .scxToolbarButton-activateBtn {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      margin: 0;
+      pointer-events: none;
+      padding-right: 7px;
+      padding-top: 4px;
+    }
+
+    &[data-scxvalue="fibonacciArcs"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-arcs;
+      }
+    }
+
+    &[data-scxvalue="fibonacciEllipses"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-ellipses;
+      }
+    }
+
+    &[data-scxvalue="fibonacciRetracements"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-retracements;
+      }
+    }
+
+    &[data-scxvalue="fibonacciFan"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-fan;
+      }
+    }
+
+    &[data-scxvalue="fibonacciTimeZones"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-time-zones;
+      }
+    }
+
+    &[data-scxvalue="fibonacciExtensions"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-extensions;
+      }
+    }
+  }
+
+  &.activated {
+
+    .scxToolbarButton-activateBtn {
+      .scxToolbarButton-dropdownElement-image {
+        color: $defaultBorderColorActivated;
+      }
+    }
+  }
+
+  .scxToolbarButton-dropdownElement {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      padding-top: 4px;
+      text-align: center;
+    }
+
+    &[data-scxvalue="fibonacciArcs"] {
+
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-arcs;
+      }
+    }
+
+    &[data-scxvalue="fibonacciEllipses"] {
+
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-ellipses;
+      }
+    }
+
+    &[data-scxvalue="fibonacciRetracements"] {
+
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-retracements;
+      }
+    }
+
+    &[data-scxvalue="fibonacciFan"] {
+
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-fan;
+      }
+    }
+
+    &[data-scxvalue="fibonacciTimeZones"] {
+
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-time-zones;
+      }
+    }
+
+    &[data-scxvalue="fibonacciExtensions"] {
+
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-fibo-extensions;
+      }
+    }
+  }
+}

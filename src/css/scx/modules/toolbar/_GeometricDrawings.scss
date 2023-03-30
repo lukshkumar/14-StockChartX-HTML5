@@ -1,0 +1,165 @@
+/* Geometric drawings */
+
+.scxToolbarGeometricDrawings {
+
+  .scxToolbarButton-activateBtn {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      margin: 0;
+      pointer-events: none;
+      padding-right: 7px;
+      padding-top: 4px;
+    }
+
+    &[data-scxvalue="lineSegment"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-line-segment;
+      }
+    }
+
+    &[data-scxvalue="horizontalLine"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-hor-line;
+      }
+    }
+
+    &[data-scxvalue="verticalLine"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-ver-line;
+      }
+    }
+
+    &[data-scxvalue="rectangle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-rectangle;
+      }
+    }
+
+    &[data-scxvalue="triangle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-triangle;
+      }
+    }
+
+    &[data-scxvalue="circle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-circle;
+      }
+    }
+
+    &[data-scxvalue="ellipse"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-ellipse;
+      }
+    }
+
+    &[data-scxvalue="polygon"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-polygon;
+      }
+    }
+
+    &[data-scxvalue="polyline"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-polyline;
+      }
+    }
+
+    &[data-scxvalue="freeHand"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-free-hand;
+      }
+    }
+
+    &[data-scxvalue="cyclicLines"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-cycliclines;
+      }
+    }
+  }
+
+  &.activated {
+    .scxToolbarButton-activateBtn {
+      .scxToolbarButton-dropdownElement-image {
+        color: $defaultBorderColorActivated;
+      }
+    }
+  }
+
+  .scxToolbarButton-dropdownElement {
+    .scxToolbarButton-dropdownElement-image {
+      font-size: 18px;
+      text-align: center;
+      padding-top: 5px;
+      color: $defaultToolbarIconColor;
+    }
+
+    &[data-scxvalue="lineSegment"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-line-segment;
+      }
+    }
+
+    &[data-scxvalue="horizontalLine"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-hor-line;
+      }
+    }
+
+    &[data-scxvalue="verticalLine"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-ver-line;
+      }
+    }
+
+    &[data-scxvalue="rectangle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-rectangle;
+      }
+    }
+
+    &[data-scxvalue="triangle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-triangle;
+      }
+    }
+
+    &[data-scxvalue="circle"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-circle;
+      }
+    }
+
+    &[data-scxvalue="ellipse"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-ellipse;
+      }
+    }
+
+    &[data-scxvalue="polygon"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-polygon;
+      }
+    }
+
+    &[data-scxvalue="polyline"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-polyline;
+      }
+    }
+
+    &[data-scxvalue="freeHand"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-free-hand;
+      }
+    }
+    &[data-scxvalue="cyclicLines"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-cycliclines;
+      }
+    }
+  }
+}

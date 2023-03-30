@@ -1,0 +1,33 @@
+/* Cross hair */
+
+.scxCrossHairContainer {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.scxCrossHairHorLine {
+  position: absolute;
+  height: 1px;
+  z-index: 100;
+}
+
+.scxCrossHairVerLine {
+  position: absolute;
+  width: 1px;
+  z-index: 100;
+}
+
+.scxCrossHairMarker {
+  position: absolute;
+  overflow: hidden;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 3px;
+  z-index: 100;
+}
+
+.scxCrossHairDateMarker {
+  text-align: center;
+  z-index: 100;
+}

@@ -1,0 +1,1182 @@
+/*******************
+***              ***
+*** Theme styles ***
+***              ***
+*******************/
+
+@mixin dropdownMenu() {
+  & > li {
+
+    &.selected {
+      background-color: $dropdownMenuSelectedItemBackgroundColor;
+      color: $dropdownTextColor;
+
+      & > a {
+        color: $textColorOnHover;
+
+        &:focus {
+          background-color: $dropdownMenuSelectedItemBackgroundColor;
+          color: $textColorOnHover;
+        }
+        &:hover {
+          color: $textColorOnHover;
+        }
+      }
+    }
+
+    & > a {
+      color: $toolbarTextColor;
+
+      &:hover {
+        background-color: $dropdownMenuHoverColor;
+        color: $textColorOnHover;
+      }
+
+      &:focus {
+        background-color: $dropdownMenuSelectedItemBackgroundColor;
+        color: $textColorOnHover;
+        outline-color: $dropdownMenuSelectedItemBackgroundColor;
+      }
+    }
+  }
+}
+
+.scxTheme#{$themeName} {
+  @import "../plugins/DateTimePicker";
+
+  .scxRootContainer {
+    &:fullscreen {
+      background-color: $fullScreenBackgroundColor;
+    }
+
+    &:-webkit-full-screen {
+      background-color: $fullScreenBackgroundColor;
+    }
+
+    &:-moz-full-screen {
+      background-color: $fullScreenBackgroundColor;
+    }
+  }
+  .scxFullWindow {
+    background-color: $fullScreenBackgroundColor;
+  }
+
+  .scxContainer{
+    border: $chartContainerBorder;
+  }
+
+  .scxWaitingBarContainer {
+    background-color: $waitingBarBackgroundColor;
+    color: $waitingBarTextColor;
+
+    .scxWaitingBarDot {
+      background-color: $waitingBarDotColor;
+    }
+  }
+
+  .scxInstrumentSearchInputField {
+    border-color: $toolbarButtonsBorderColor;
+    background-color: transparent;
+    color: $instrumentSearchTextColor;
+
+    &:hover,
+    &.active {
+      background-color: $btnWrapperBackground;
+      border-color: $toolbarBorderColor;
+    }
+
+    &:focus {
+      color: $textColorOnHover;
+    }
+  }
+
+  .scxTimeFramePicker {
+
+    .scxToolbarButton-activateBtn {
+
+      span {
+        color: $timeFramePickerButtonTextColor;
+      }
+    }
+
+    .scxTimeFramePicker-CustomValueText {
+      color: $timeFramePickerCustomValueTextColor;
+      border-color: $timeFramePickerCustomValueBorderColor;
+    }
+  }
+
+  .scxToolbar-btn {
+    border-color: $toolbarButtonsBorderColor;
+    background-color: transparent;
+
+    .scxToolbarButton-dropdownElement-image {
+      color: $toolbarIconColor;
+    }
+
+    &:hover {
+      background-color: $btnWrapperBackground;
+      border-color: $toolbarBorderColor;
+    }
+  }
+
+  .scxToolbarButton {
+
+    &.scxToolbarButtonWithDropdown {
+
+      &.active {
+
+        .scxToolbarButton-toggleDropdownBtn {
+          border-bottom-color: $switcheryBorderColor;
+        }
+      }
+    }
+
+    &.active {
+
+      .scxToolbarButton-buttonWrapper {
+        border-color: $toolbarBorderColor;
+        background-color: $btnWrapperBackground;
+
+        .scxToolbarButton-toggleDropdownBtn {
+          border-color: $toolbarBorderColor;
+        }
+      }
+    }
+
+    .scxToolbarButton-buttonWrapper {
+
+      .scxToolbarButton-activateBtn {
+
+        .scxToolbarButton-dropdownElement-image {
+          color: $toolbarIconColor;
+        }
+      }
+
+      &.hover {
+        background-color: $btnWrapperBackground;
+        border-color: $toolbarBorderColor;
+
+        .scxToolbarButton-toggleDropdownBtn {
+          border-color: $toolbarBorderColor;
+        }
+      }
+    }
+
+    &.scxToolbarCanToggle {
+
+      .scxToolbarButton-buttonWrapper {
+
+        .scxToolbarButton-activateBtn {
+
+          .scxToolbarButton-dropdownElement-image {
+            color: $toolbarIconColor;
+          }
+        }
+      }
+
+      &.activated {
+
+        .scxToolbarButton-buttonWrapper {
+          border-color: $borderColorActivated;
+        }
+      }
+
+    }
+  }
+
+  .scxToolbarButton-buttonWrapper {
+    background-color: transparent;
+    border-color: $toolbarButtonsBorderColor;
+  }
+
+  .scxToolbarButton-activateBtn {
+    background-color: transparent;
+  }
+
+  .scxToolbarButton-dropdownWrapper {
+    color: $toolbarTextColor;
+    background-color: $backgroundColor;
+    border-color: $toolbarBorderColor;
+
+    &.activated, &.activated:before {
+      border-color: $borderColorActivated;
+    }
+
+    .scxTimeFramePicker-CustomValueWrapper {
+
+      .scxTimeFramePicker-CustomValueUnits {
+
+        .selectpicker {
+          color: $toolbarTextColor;
+          border-color: $dropdownBtnBorderColor;
+          background-color: $inputBackgroundColor;
+
+          &:active {
+            background-color: $dropdownMenuActiveBackgroundColor;
+          }
+        }
+
+      }
+
+      .scxTimeFramePicker-CustomValuePlus {
+        color: $toolbarTextColor;
+        border-color: $dropdownBtnBorderColor;
+        background-color: $inputBackgroundColor;
+
+        &:active {
+          background-color: $dropdownMenuActiveBackgroundColor;
+        }
+      }
+
+      .scxTimeFramePicker-CustomValueMinus {
+        color: $toolbarTextColor;
+        border-color: $dropdownBtnBorderColor;
+        background-color: $inputBackgroundColor;
+
+        &:active {
+          background-color: $dropdownMenuActiveBackgroundColor;
+        }
+      }
+
+      .scxTimeFramePicker-CustomValueText {
+        color: $toolbarTextColor;
+        border-color: $dropdownBtnBorderColor;
+        background-color: $inputBackgroundColor;
+      }
+    }
+  }
+
+  .scxToolbarButton-dropdownElement {
+
+    .scxToolbarButton-dropdownElement-image {
+      color: $dropdownIconColor;
+    }
+
+    &.active {
+      background-color: $dropdownMenuSelectedItemBackgroundColor;
+      color: $dropdownTextColor;
+
+      .scxToolbarButton-dropdownElement-image {
+        color: $dropdownActiveIconColor;
+      }
+
+      &:hover {
+        background-color: $dropdownMenuSelectedItemBackgroundColor;
+        color: $textColorOnHover;
+
+        .scxToolbarButton-dropdownElement-image {
+          color: $iconColorOnHover;
+        }
+      }
+    }
+
+    &:hover{
+      background-color: $dropdownMenuHoverColor;
+      color: $textColorOnHover;
+
+      .scxToolbarButton-dropdownElement-image {
+        color: $iconColorOnHover;
+      }
+    }
+  }
+
+  .scxTimeFramePicker-CustomValueUnits {
+
+    .dropdown-menu {
+      border-color: $dropdownBtnBorderColor;
+      background-color: $inputBackgroundColor;
+
+      &.hover {
+        background-color: $dropdownMenuHoverColor;
+        color: $textColorOnHover;
+      }
+
+      @include dropdownMenu();
+    }
+  }
+
+  .scxToolbarButtonWithDropdown {
+
+    .scxToolbarButton-toggleDropdownBtn {
+      border-left-color: $toolbarButtonToggleBtnColor;
+
+      .scxToolbarButton-dropdownElement-image {
+        color: $toolbarIconColor;
+      }
+    }
+
+    &.scxToolbarCanToggle {
+
+      &.activated {
+
+        .scxToolbarButton-toggleDropdownBtn {
+          border-color: $borderColorActivated;
+        }
+      }
+    }
+  }
+
+  .scxPanelTitleIcon {
+
+    &:hover {
+      background-color: $navigationBtnHoverColor;
+    }
+  }
+
+  .scxIndicatorCollapseHide {
+    color: $chartPanelTitleButtonColor;
+
+    &:hover {
+      color: $chartPanelTitleButtonColorOnHover;
+    }
+  }
+
+  .scxIndicatorCollapseShow {
+    color: $chartPanelTitleButtonColor;
+
+    &:hover {
+      color: $chartPanelTitleButtonColorOnHover;
+    }
+  }
+
+  .scxIndicatorRemoveIcon {
+    color: $chartPanelTitleButtonColor;
+
+    &:hover {
+      color: $chartPanelTitleButtonColorOnHover;
+    }
+  }
+
+  .scxPanelClose {
+    color: $chartPanelTitleButtonColor;
+
+    &:hover {
+      color: $chartPanelTitleButtonColorOnHover;
+    }
+  }
+
+  .scxPanelMoveUp {
+    color: $chartPanelTitleButtonColor;
+
+    &:hover {
+      color: $chartPanelTitleButtonColorOnHover;
+    }
+  }
+
+  .scxPanelMoveDown {
+    color: $chartPanelTitleButtonColor;
+
+    &:hover {
+      color: $chartPanelTitleButtonColorOnHover;
+    }
+  }
+
+  .scxPanelMaximize {
+    color: $chartPanelTitleButtonColor;
+
+    &:hover {
+      color: $chartPanelTitleButtonColorOnHover;
+    }
+  }
+
+  .scxPanelRestore {
+    color: $chartPanelTitleButtonColor;
+
+    &:hover {
+      color: $chartPanelTitleButtonColorOnHover;
+    }
+  }
+
+  .scxPanelScrollToLast {
+    color: $chartPanelTitleButtonColor;
+    width: 23px;
+
+    &:hover {
+      color: $chartPanelTitleButtonColorOnHover;
+    }
+  }
+
+  .scxNavigation {
+
+    & > div {
+
+      &:hover {
+        background-color: $navigationDivHoverColor;
+      }
+    }
+  }
+
+  .scxNavigation-btn {
+
+    &:hover {
+      background-color: $navigationBtnHoverColor;
+    }
+  }
+
+  .scxNavigation-btn-scrollLeft {
+    color: $navigationBtnColor;
+
+    &:hover {
+      color: $navigationBtnColorOnHover;
+    }
+  }
+
+  .scxNavigation-btn-zoomOut {
+    color: $navigationBtnColor;
+
+    &:hover {
+      color: $navigationBtnColorOnHover;
+    }
+  }
+
+  .scxNavigation-btn-zoomIn {
+    color: $navigationBtnColor;
+
+    &:hover {
+      color: $navigationBtnColorOnHover;
+    }
+  }
+
+  .scxNavigation-btn-scrollRight {
+    color: $navigationBtnColor;
+
+    &:hover {
+      color: $navigationBtnColorOnHover;
+    }
+  }
+
+  .scxNavigation-btn-scrollToLast {
+    color: $navigationBtnColor;
+
+    &:hover {
+      color: $navigationBtnColorOnHover;
+    }
+  }
+
+  .scxNavigation-btn-scrollToFirst {
+    color: $navigationBtnColor;
+
+    &:hover {
+      color: $navigationBtnColorOnHover;
+    }
+  }
+
+  .scxInstrumentSearchNoResults {
+    color: $textColor;
+  }
+
+  .scxInstrumentSearchResults {
+    background-color: $backgroundColor;
+    border-color: $instrumentSearchResultsBorderColor;
+    color: $textColor;
+    box-shadow: $boxShadow;
+
+    .scxInstrumentSearchItem {
+
+      &.active {
+        background-color: $dropdownMenuHoverColor;
+        color: $textColorOnHover;
+      }
+
+      .scxHighlightedText {
+        color: $instrumentSearchResultsHighlightedTextColor;
+      }
+    }
+  }
+
+  .popover {
+    background-color: $backgroundColor;
+    color: $textColor;
+    box-shadow: $boxShadow;
+
+    &.top {
+
+      & > .arrow {
+        border-top-color: $popoverArrowColor;
+
+        &:after {
+          border-top-color: $backgroundColor;
+        }
+      }
+    }
+
+    &.bottom {
+
+      & > .arrow {
+        border-bottom-color: $popoverArrowColor;
+
+        &:after {
+          border-bottom-color: $backgroundColor;
+        }
+      }
+    }
+
+    &.left {
+
+      & > .arrow {
+        border-left-color: $popoverArrowColor;
+
+        &:after {
+          border-left-color: $backgroundColor;
+        }
+      }
+    }
+
+    &.right {
+
+      & > .arrow {
+        border-right-color: $popoverArrowColor;
+
+        &:after {
+          border-right-color: $backgroundColor;
+        }
+      }
+    }
+  }
+
+  .scxTabs {
+    border-bottom-color: $tabsBottomLineColor;
+
+    .scxTabItem {
+      color: $tabsItemColor;
+
+      &:hover {
+        color: $tabsActiveItemColor;
+      }
+
+      &.active {
+        color: $tabsActiveItemColor;
+        border-bottom-color: $tabsActiveItemHighlightColor;
+      }
+    }
+  }
+
+  .scxDropdown {
+    background-color: $inputBackgroundColor;
+
+    .dropdown-menu {
+      background-color: $inputBackgroundColor;
+      color: $dropdownMenuItemTextColor;
+      border-color: $dropdownBtnBorderColor;
+      box-shadow: $dropDownMenuShadow;
+
+
+      @include dropdownMenu();
+
+      & > li {
+        &:hover {
+          background-color: $dropdownMenuHoverColor;
+          color: $textColorOnHover;
+
+          &.selected {
+            background-color: $dropdownMenuSelectedItemBackgroundColor;
+            color: $textColorOnHover;
+          }
+        }
+
+        &:active {
+          background-color: $dropdownMenuSelectedItemBackgroundColor;
+          color: $textColorOnHover;
+        }
+      }
+    }
+  }
+
+  .scxButtonGroup {
+
+    & > label {
+      color: $textColor;
+      border-color: $dropdownBtnBorderColor;
+      background-color: $inputBackgroundColor;
+
+      &:hover {
+        border-color: $toolbarBorderColor;
+      }
+
+      &.active {
+        color: $buttonGroupActiveItemTextColor;
+        background-color: $buttonGroupActiveItemBackgroundColor;
+      }
+    }
+  }
+
+  .scxContextMenu {
+    background-color: $backgroundColor;
+    box-shadow: $boxShadow;
+    border-top-color: $contextMenuBorderColor;
+    border-left-color: $contextMenuBorderColor;
+
+    & > li {
+
+      & > a {
+        color: $textColor;
+
+        &:hover, &:focus {
+          background-color: $dropdownMenuHoverColor;
+          color: $textColorOnHover;
+        }
+      }
+
+      &.disabled {
+        > a, > a:hover, > a:focus, > a:active {
+          color: $contextMenuDisabledTextColor;
+        }
+      }
+    }
+
+    &.dropdown-menu {
+
+      .scxSubMenu {
+        border-left-color: $dialogDividerColor;
+        box-shadow: $boxShadow;
+      }
+
+      .divider {
+        background-color: $contextMenuDividerColor;
+      }
+    }
+  }
+
+  .scxDialog {
+
+    .sp-replacer {
+      border-color: $dropdownBtnBorderColor;
+      background-color: $backgroundColor;
+
+      &:hover {
+        border-color: $colorPickerButtonHoverBorderColor;
+        background-color: $colorPickerButtonHoverBackgroundColor;
+      }
+
+      &.sp-disabled {
+        @include spDisabled($disabledElementColor);
+
+        .sp-preview-inner {
+          @include spDisabled($disabledElementColor);
+        }
+      }
+    }
+
+    .scx_switchery {
+      background-color: $switcheryBackgroundColor;
+      border-color: $switcheryBorderColor;
+
+      & > small {
+        background-color: $switcheryBackgroundColor;
+        box-shadow:0 0.0981em 0.2941em rgba(0,0,0,0.4);
+      }
+    }
+
+    .dropdown-toggle {
+
+      &.selectpicker {
+        border-color: $dropdownBtnBorderColor;
+        background-color: $inputBackgroundColor;
+        color: $dropdownMenuTextColor;
+
+        &:active {
+          background-color: $btnWrapperBackground;
+        }
+      }
+    }
+
+    .modal-dialog {
+
+      .modal-content {
+        background-color: $backgroundColor;
+        color: $textColor;
+
+        .modal-header {
+          border-bottom-color: $dialogDividerColor;
+
+          .close {
+            color: $dialogCloseButtonColor;
+            text-shadow: $dialogCloseButtonShadow;
+          }
+        }
+
+        .modal-body {
+
+          input {
+
+            &.form-control {
+              background-color: $inputBackgroundColor;
+              border-color: $dropdownBtnBorderColor;
+              color: $textColor;
+
+              &[disabled] {
+                background-color: $dropdownDisabledColor;
+                color: $disabledTextColor;
+              }
+            }
+          }
+        }
+
+        .modal-footer {
+          border-top-color: $dialogDividerColor;
+        }
+      }
+    }
+  }
+
+  #scxIndicators {
+
+    .modal-dialog {
+
+      .modal-header {
+
+        label[for="scxIndicators_chkHelpSwitcher"] {
+          color: $textColor;
+        }
+
+        .scxIndicators_helpControlPanel {
+          background-color: $backgroundColor;
+        }
+
+        #scxIndicators_searchBlock {
+
+          > .input-group {
+
+            > .input-group-addon {
+              background-color: $indicatorsDialogSearchIconBackgroundColor;
+              border-color: $indicatorsDialogSearchIconBorderColor;
+            }
+          }
+        }
+
+        input {
+          &.form-control {
+            background-color: $inputBackgroundColor;
+            border-color: $dropdownBtnBorderColor;
+            color: $textColor;
+          }
+        }
+      }
+    }
+
+    .scxIndicatorItem {
+
+      &.active {
+        background-color: $dropdownMenuSelectedItemBackgroundColor;
+      }
+
+      &:hover {
+        background-color: $dropdownMenuHoverColor;
+      }
+    }
+  }
+
+  #scxThemeDialog {
+
+    .modal-dialog {
+
+      .modal-content {
+
+        label.disabled {
+          color: $disabledTextColor;
+        }
+
+        #scxThemeDialog_input_newThemeName {
+          background-color: $inputBackgroundColor;
+          border-color: $dropdownBtnBorderColor;
+          color: $textColor;
+        }
+      }
+    }
+  }
+
+  .scxSpectrum {
+
+    &.sp-container {
+      border-color: $spectrumBorderColor;
+      background-color: $backgroundColor;
+
+      .sp-palette .sp-thumb-el {
+        border-color: $spectrumBorderColor;
+      }
+    }
+
+    .sp-picker-container {
+      border-left-color: $spectrumBorderColor;
+    }
+
+    .sp-color {
+      border-color: $spectrumBorderColor;
+    }
+
+    .sp-hue {
+      border-color: $spectrumBorderColor;
+    }
+
+    .sp-initial {
+      border-color: $spectrumBorderColor;
+    }
+  }
+
+  #scxTooltipView {
+
+    .scxTooltipView_tooltipTextStyles {
+
+      label {
+
+        &.scxTooltipView_label_textBold {
+          @if $isLightTheme == true {
+            background-image: url("#{$imgPath}/TextBold24.png");
+          } @else {
+            background-image: url("#{$imgPath}/TextBold24White.png");
+
+            &.active {
+              background-image: url("#{$imgPath}/TextBold24.png");
+            }
+          }
+        }
+
+        &.scxTooltipView_label_textItalic {
+          @if $isLightTheme == true {
+            background-image: url("#{$imgPath}/TextItalic24.png");
+          } @else {
+            background-image: url("#{$imgPath}/TextItalic24White.png");
+
+            &.active {
+              background-image: url("#{$imgPath}/TextItalic24.png");
+            }
+          }
+        }
+
+        &.scxTooltipView_label_textUnderline {
+          @if $isLightTheme == true {
+            background-image: url("#{$imgPath}/TextUnderline24.png");
+          } @else {
+            background-image: url("#{$imgPath}/TextUnderline24White.png");
+
+            &.active {
+              background-image: url("#{$imgPath}/TextUnderline24.png");
+            }
+          }
+        }
+      }
+    }
+
+    .scxTooltipView_image_previewWrapper {
+      background-color: $inputBackgroundColor;
+      border-color: $dropdownBtnBorderColor;
+    }
+
+    label {
+
+      &.disabled {
+        color: $disabledTextColor !important;
+      }
+    }
+
+    #scxTooltipView_input_tooltipText {
+      background-color: $inputBackgroundColor;
+      color: $textColor;
+      border-color: $dropdownBtnBorderColor;
+    }
+  }
+
+  #scxDrawingDialog {
+
+    .modal-dialog {
+
+      .modal-content {
+
+        .modal-body {
+
+          // #scxDrawingDialog_panel_text, #scxDrawingDialog_panel_tooltipText
+          .scxDrawingDialog_textStyles {
+
+            label {
+              &.scxDrawingDialog_label_textBold {
+                @if $isLightTheme == true {
+                  background-image: url("#{$imgPath}/TextBold24.png");
+                }
+                @else {
+                  background-image: url("#{$imgPath}/TextBold24White.png");
+
+                  &.active {
+                    background-image: url("#{$imgPath}/TextBold24.png");
+                  }
+                }
+              }
+
+              &.scxDrawingDialog_label_textItalic {
+                @if $isLightTheme == true {
+                  background-image: url("#{$imgPath}/TextItalic24.png");
+                }
+                @else {
+                  background-image: url("#{$imgPath}/TextItalic24White.png");
+
+                  &.active {
+                    background-image: url("#{$imgPath}/TextItalic24.png");
+                  }
+                }
+              }
+
+              &.scxDrawingDialog_label_textUndeline {
+                @if $isLightTheme == true {
+                  background-image: url("#{$imgPath}/TextUnderline24.png");
+                }
+                @else {
+                  background-image: url("#{$imgPath}/TextUnderline24White.png");
+
+                  &.active {
+                    background-image: url("#{$imgPath}/TextUnderline24.png");
+                  }
+                }
+              }
+            }
+          }
+
+          // #scxDrawingDialog_panel_image
+          .scxDrawingDialog_imagePreviewWrapper {
+            background-color: $inputBackgroundColor;
+            border-color: $dropdownBtnBorderColor;
+          }
+
+          label {
+
+            &.disabled {
+              color: $disabledTextColor !important;
+            }
+          }
+
+          #scxDrawingDialog_input_text {
+            background-color: $inputBackgroundColor ;
+            color: $textColor;
+            border-color: $dropdownBtnBorderColor;
+          }
+
+          #scxDrawingDialog_input_lineStyle {
+
+            &:disabled + .bootstrap-select {
+              background-color: $dropdownDisabledColor;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  #scxIndicatorDialog {
+
+    .modal-dialog {
+
+      .modal-content {
+
+        .modal-body {
+
+          form {
+
+            fieldset {
+
+              input {
+                background-color: $inputBackgroundColor;
+                color: $textColor;
+                border-color: $dropdownBtnBorderColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #scxFibonacciDrawingDialog {
+
+    .modal-dialog {
+
+      .modal-content {
+
+        .modal-body {
+
+          label {
+
+            &.disabled {
+              color: $disabledTextColor !important;
+            }
+          }
+
+          .scxLineStyleSelector,
+          .scxFibonacciDrawingDialog_input_labelsPosition,
+          .scxFibonacciDrawingDialog_input_labelsTextPosition {
+            background-color: $inputBackgroundColor;
+          }
+
+          .scxFibonacciDrawingDialog_input_lineStyle,
+          .scxFibonacciDrawingDialog_input_labelsPosition,
+          .scxFibonacciDrawingDialog_input_labelsTextPosition {
+
+            &:disabled {
+
+              & + .bootstrap-select {
+                background-color: $dropdownDisabledColor;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  #scxIchimokuIndicatorDialog {
+
+    .modal-dialog {
+
+      .modal-content {
+
+        .modal-body {
+
+          label {
+
+            &.disabled {
+              color: $disabledTextColor !important;
+            }
+          }
+
+          .scxIchimokuDrawingDialog_input_lineStyle {
+
+            &:disabled {
+
+              & + .bootstrap-select {
+                background-color: $dropdownDisabledColor;
+              }
+            }
+          }
+
+          .scxNumericField-arrowUp .scxNumericFieldArrow {
+            border-color: transparent transparent #333333 transparent;
+          }
+
+          .scxNumericField-arrowDown .scxNumericFieldArrow {
+            border-color: #333333 transparent transparent  transparent;
+          }
+        }
+
+        .btn {
+
+          &.active {
+            -webkit-box-shadow: inset 0 0.2143em 0.3572em rgba(0,0,0,.125);
+            box-shadow: inset 0 0.2143em 0.3572em rgba(0,0,0,.125);
+            background-color: #E6E6E6 !important;
+          }
+
+          &:active {
+            @extend .active;
+          }
+        }
+      }
+    }
+  }
+
+  #scxPriceStyleDialog {
+
+    .modal-dialog {
+
+      .modal-content {
+
+        .modal-body {
+
+          label {
+
+            &.disabled {
+              color: $disabledTextColor !important;
+            }
+          }
+
+          .scxLineStyleSelector,
+          .scxPriceStyleDialog_input_source
+          .scxPriceStyleDialog_input_boxSizeKind,
+          .scxPriceStyleDialog_input_barStyle,
+          .scxPriceStyleDialog_input_coloredBarStyle {
+            background-color: $inputBackgroundColor;
+          }
+
+          .scxPriceStyleDialog_input_lineStyle,
+          .scxPriceStyleDialog_input_source,
+          .scxPriceStyleDialog_input_boxSizeKind,
+          .scxPriceStyleDialog_input_barStyle,
+          .scxPriceStyleDialog_input_coloredBarStyle {
+
+            &:disabled {
+
+              & + .bootstrap-select {
+                background-color: $dropdownDisabledColor;
+              }
+            }
+          }
+
+          .scxNumericField-arrowUp .scxNumericFieldArrow {
+            border-color: transparent transparent $numericFieldArrowColor transparent;
+          }
+
+          .scxNumericField-arrowDown .scxNumericFieldArrow {
+            border-color: $numericFieldArrowColor transparent transparent  transparent;
+          }
+        }
+
+      }
+    }
+  }
+
+  .scxScrollbar {
+
+    background-color: $scrollbarColor;
+
+    .scxScrollingPanel {
+
+      background-color: $scrollingPanelColor;
+    }
+
+    .scxLeftSideDelimiter,
+    .scxRightSideDelimiter {
+
+      background-color: $resizeDelimiterColor;
+    }
+  }
+  /*Internet Explorer 9*/
+  :root .scxWatermark {
+    opacity: 0.8\9;
+  }
+
+  /*Internet Explorer 10*/
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .scxWatermark {
+      opacity: 0.8;
+    }
+    .scxWatermarkSymbol{
+      color: $watermarkInfoAndSymbol !important;
+    }
+    .scxWatermarkInfo{
+      color: $watermarkInfoAndSymbol !important;
+    }
+  }
+
+  @supports (-ms-accelerator:true) {
+    .scxWatermark {
+      opacity: 0.8;
+    }
+    .scxWatermarkSymbol{
+      color: $watermarkInfoAndSymbol !important;
+    }
+    .scxWatermarkInfo{
+      color: $watermarkInfoAndSymbol !important;
+    }
+  }
+
+  /* Edge */
+  @supports (-ms-ime-align:auto) {
+    .scxWatermark {
+      opacity: 0.8;
+    }
+    .scxWatermarkSymbol{
+      color: $watermarkInfoAndSymbol !important;
+    }
+    .scxWatermarkInfo{
+      color: $watermarkInfoAndSymbol !important;
+    }
+  }
+}

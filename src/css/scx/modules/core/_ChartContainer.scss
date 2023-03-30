@@ -1,0 +1,96 @@
+/* Chart container */
+
+.scxContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  border: 1px solid #808080;
+
+  &.scxDateScaleScroll {
+    cursor: ew-resize;
+  }
+
+  &.scxValueScaleScroll {
+    cursor: ns-resize;
+  }
+
+  &.scxPanelScroll {
+    cursor: url(#{$imgPath}/CursorClosedHand.cur) 11 11, move !important;
+  }
+
+  &.scxDrawingMove {
+    cursor: url(#{$imgPath}/CursorClosedHand.cur) 11 11, move !important;
+  }
+
+  &.scxCursorPointer{
+    cursor: pointer !important;
+  }
+
+  &.scxDrawingResizeEW {
+    cursor: ew-resize !important;
+  }
+
+  &.scxDrawingResizeNS {
+    cursor: ns-resize !important;
+  }
+
+  &.scxDrawingResizeNESW {
+    cursor: nesw-resize !important;
+  }
+
+  &.scxDrawingResizeNWSE {
+    cursor: nwse-resize !important;
+  }
+
+  &.scxDrawingResize {
+    cursor: url(#{$imgPath}/CursorCross.cur) 10 10, crosshair;
+  }
+
+  &.scxDrawingCreate {
+    cursor: url(#{$imgPath}/CursorCross.cur) 10 10, crosshair !important;
+  }
+
+  &.scxSplitterMove {
+    cursor: ns-resize !important;
+  }
+
+  &.scxCrossHair {
+    cursor: url(#{$imgPath}/CursorCross.cur) 10 10, default;
+  }
+}
+
+.scxRootContainer {
+  position: relative;
+
+  &.scxFullWindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 1px;
+  }
+
+  &:fullscreen {
+    background-color: $defaultFullScreenBackgroundColor;
+  }
+
+  &:-webkit-full-screen {
+    background-color: $defaultFullScreenBackgroundColor;
+  }
+
+  &:-moz-full-screen {
+    background-color: $defaultFullScreenBackgroundColor;
+  }
+}
+
+.scxLogo {
+  position: relative;
+  background: url(#{$imgPath}/logo-free.png) no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 150px;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 20;
+}

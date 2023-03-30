@@ -1,0 +1,71 @@
+/* Line style drop down */
+
+@mixin backgroundImage($image) {
+  background: transparent url($image) center center no-repeat;
+}
+
+.scxLineStyleSelector {
+
+  &.bootstrap-select{
+
+    .dropdown-toggle{
+
+      &.selectpicker {
+
+        &[data-selectvalue="solid"] {
+          @include backgroundImage("#{$imgPath}/LineTypeSolid.png");
+        }
+
+        &[data-selectvalue="dash"] {
+          @include backgroundImage("#{$imgPath}/LineTypeDash.png");
+        }
+
+        &[data-selectvalue="dot"] {
+          @include backgroundImage("#{$imgPath}/LineTypeDot.png");
+        }
+
+        &[data-selectvalue="dash-dot"] {
+          @include backgroundImage("#{$imgPath}/LineTypeDashDot.png");
+        }
+      }
+    }
+
+    .dropdown-menu {
+
+      &.selectpicker {
+
+        li {
+
+          &[rel="0"] {
+
+            a {
+              @include backgroundImage("#{$imgPath}/LineTypeSolid.png");
+            }
+          }
+
+          &[rel="1"] {
+
+            a {
+              @include backgroundImage("#{$imgPath}/LineTypeDash.png");
+            }
+          }
+
+          &[rel="2"] {
+
+            a {
+              @include backgroundImage("#{$imgPath}/LineTypeDot.png");
+            }
+          }
+
+          &[rel="3"] {
+
+            a {
+              @include backgroundImage("#{$imgPath}/LineTypeDashDot.png");
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

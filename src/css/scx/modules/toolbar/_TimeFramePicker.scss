@@ -1,0 +1,152 @@
+/* Time frame picker */
+
+@mixin customValueSign() {
+  height: 2.1429em;
+  width: 2em;
+  padding: 0;
+}
+
+.scxTimeFramePicker {
+  width: 4.5833em;
+
+  .scxToolbarButton-dropdownWrapper {
+    width: 17.0833em !important;
+  }
+
+  .scxToolbarButton-buttonWrapper {
+    width: 100%
+  }
+
+  .scxToolbarButton-activateBtn {
+    text-align: center;
+    overflow: hidden;
+    padding-top: 0.5em;
+    width: 3.5em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    span {
+      color: #919191;
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.scxTimeFramePickerDropDown {
+  position: fixed;
+  text-align: left;
+  font-size: .8571428571428571em;
+
+  .scxTimeFramePicker-dropdownContainer {
+    min-width: 8em;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .scxToolbarButton-dropdownElement {
+    padding: 0.8333em 1.66662em 0;
+    line-height: 1em;
+  }
+
+  .scxTimeFramePicker-CustomValueWrapper {
+    padding: 0 0.4167em;
+    margin-top: .5em;
+    margin-bottom: .8em;
+
+    & > * {
+      margin-top: .3em;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    input {
+
+      &.form-control {
+        font-size: 1.1666em;
+      }
+    }
+
+    .btn {
+      font-size: 1.1666666666666667em;
+    }
+  }
+
+  .scxTimeFramePicker-CustomValueText {
+    color: #444444;
+    border: 1px solid #868686;
+    width: 2.5em;
+    text-align: center;
+    height: 2.143em;
+    padding: 0 0.1429em;
+    font-size: .8571428571428571em;
+  }
+
+  .scxTimeFramePicker-CustomValuePlus {
+    @include customValueSign();
+  }
+
+  .scxTimeFramePicker-CustomValueMinus {
+    @include customValueSign();
+  }
+
+  .scxTimeFramePicker-CustomValueUnits {
+    width: 7.3em !important;
+
+    &.bootstrap-select {
+      margin-bottom: 0;
+    }
+
+    & > button {
+      height: 2.1429em;
+      padding-top: 0.2858em;
+      padding-left: 0.5574em;
+    }
+  }
+}
+
+.scxTimeFramePicker-CustomValueUnits {
+
+  .dropdown-menu {
+    border: 1px solid $defaultDropdownBtnBorderColor;
+    background-color: $defaultInputBackgroundColor;
+    font-size: 1em;
+
+    & > li {
+
+      &.selected {
+        background-color: $defaultDropdownMenuSelectedColor;
+        color: #4a4a4a;
+
+        & > a {
+          color: $defaultTextColorOnHover;
+
+          &:focus {
+            background-color: $defaultDropdownMenuSelectedColor;
+            color: $defaultTextColorOnHover;
+          }
+          &.hover {
+            color: $defaultTextColorOnHover;
+          }
+        }
+      }
+
+      & > a{
+        color: $defaultToolbarTextColor;
+
+        &.hover {
+          background-color: $defaultDropdownMenuHoverColor;
+          color: $defaultToolbarTextColor;
+        }
+
+        &:focus {
+          background-color: $defaultDropdownMenuSelectedColor;
+          color: $defaultTextColorOnHover;
+          outline-color: $defaultDropdownMenuSelectedColor;
+        }
+      }
+    }
+  }
+}

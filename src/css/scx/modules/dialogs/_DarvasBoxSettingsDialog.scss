@@ -1,0 +1,186 @@
+/*Darvas Box Dialog */
+
+#scxDarvasBoxDialog {
+
+  @media (min-width: 1px) {
+
+    .modal-dialog {
+      width: 20em;
+
+      .modal-content {
+
+        .scxDarvasBoxDialog-body {
+
+          .scxDarvasboxDialog_label {
+            width: 4em;
+            vertical-align: middle;
+          }
+
+          .scxLineStyleSelector {
+            width: 14.5em;
+          }
+        }
+      }
+    }
+
+  }
+
+  @media (min-width: 400px) {
+
+    .modal-dialog {
+      width: 32em;
+
+      .modal-content {
+
+        .scxDarvasBoxDialog-body {
+
+          .scxDarvasBoxDialog_label {
+            width: 5em;
+            vertical-align: middle;
+          }
+
+          .scxLineStyleSelector {
+            width: 7.99em;
+          }
+        }
+      }
+    }
+
+  }
+
+  @media (min-width: 768px) {
+
+    .modal-dialog {
+      width: 38em;
+
+      .modal-content {
+
+        .scxDarvasBoxDialog-body {
+
+          .scxDarvasBoxDialog_label {
+            width: 6em;
+            vertical-align: middle;
+          }
+
+          .scxLineStyleSelector {
+            width: 13.75em;
+          }
+        }
+      }
+    }
+
+  }
+
+
+  .scxDarvasBoxDialog-body {
+    height: 38em;
+    overflow: auto;
+    padding: 1em;
+
+    table {
+
+      td {
+
+        .sp-replacer {
+          margin: 0 0.5833em;
+        }
+      }
+    }
+
+    .scxLineStyleSelector,
+    .scxDarvasBoxDialog_input_scalePosition{
+      margin: 0 0.5833em;
+      width: 12.75em;
+    }
+
+    .scxDarvasBoxDialog_input_text {
+      background-color: $defaultInputBackgroundColor;
+      color: $defaultToolbarTextColor;
+      border-color: $defaultDropdownBtnBorderColor;
+    }
+
+    .scxDarvasBoxDialog_input_lineStyle,
+    .scxDarvasBoxDialog_input_scalePosition {
+
+      &:disabled {
+
+        & + .bootstrap-select {
+          background-color: $defaultDropdownDisabledColor;
+        }
+      }
+    }
+
+    .scxDarvasBoxDialog_input_lineWidth {
+      display: inline-block;
+      width: 3.65572em;
+      vertical-align: middle;
+    }
+
+
+    .scxDarvasBoxDialog_input_darvasBoxLinePeriods {
+      display: inline-block;
+      width: 10.65572em;
+    }
+
+    .scxDarvasBoxDialog_panel_figure_inputsPanel {
+      @include dialogsPanelFigure();
+    }
+
+    .scxDarvasBoxDialog_panel_figure_inputsPanel,
+    .scxDarvasBoxDialog_panel_figure_linesStylePanel {
+
+      td {
+
+        &:last-child {
+
+          & > * {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .scxDarvasBoxIndicatorDialog_label {
+      padding-left: 0.3em;
+      margin: 0.5em 0;
+      width: 8em;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .scxDarvasBoxDialog_label_darvasBoxLinePeriods {
+      padding-left: 0.3em;
+      width: 12em;
+    }
+
+    .scxDarvasBoxDialog_label_priceLine {
+      padding-left: 0.3em;
+    }
+    .scxNumericField-wrapper{
+        display: inline-block}
+
+    .scxNumericField-arrowWrapper {
+      background: transparent;
+      border-left: 0;
+      padding-top: 0 !important;
+    }
+
+    .scxNumericField-arrowDown {
+      right: 1px;
+      margin-top: 12px;
+
+      .scxNumericFieldArrow {
+        border-width: 4px 4px 0 4px;
+      }
+    }
+
+    .scxNumericField-arrowUp {
+      right: 1px;
+      margin-top: 1px;
+
+      .scxNumericFieldArrow {
+        border-width: 0 4px 4px 4px;
+      }
+    }
+  }
+}

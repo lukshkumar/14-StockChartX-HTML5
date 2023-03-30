@@ -1,0 +1,113 @@
+/* Chart panel */
+
+.scxChartPanel {
+  position: absolute;
+  overflow: hidden;
+
+  & > canvas {
+    z-index: 10;
+  }
+}
+
+.scxMeasureTool {
+  position: absolute;
+  padding: 5px;
+}
+
+.scxPanelTitle {
+  position: absolute;
+  padding: 1px 5px 0;
+  z-index: 101;
+  margin-top: 4px;
+
+  .scxSymbolTitle {
+    margin-top: 2px;
+  }
+
+  .scxIndicatorTitle {
+    line-height: 1.8em;
+  }
+
+  & > * {
+    display: block;
+    vertical-align: middle;
+  }
+
+  & > div {
+
+    & > * {
+      vertical-align: middle;
+    }
+  }
+
+  .scxPanelTitleCaption {
+    padding-right: 5px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .scxToggleIndicatorTitles {
+    width: 16px;
+    height: 15px;
+    float: left;
+    margin: 1px 3px 0 0;
+    line-height: 16px;
+  }
+}
+
+.scxPanelTitleValue {
+  margin-left: 5px;
+  cursor: default;
+}
+
+.scxPanelTitleIcon {
+  font-family: 'scx-icons';
+  font-size: 16px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  text-align: center;
+}
+
+  .scxIndicatorRemoveIcon {
+    @extend .icon-remove;
+  }
+
+  .scxIndicatorCollapseHide {
+    @extend .icon-zoom-out;
+  }
+
+  .scxIndicatorCollapseShow {
+    @extend .icon-zoom-in;
+  }
+
+  .scxPanelOptions {
+    position: absolute;
+    top: 0;
+    right: 5px;
+  }
+
+  .scxPanelClose {
+    @extend .icon-remove;
+  }
+
+  .scxPanelMoveUp {
+    @extend .icon-move-up;
+  }
+
+  .scxPanelMoveDown {
+    @extend .icon-move-down;
+  }
+
+  .scxPanelMaximize {
+    @extend .icon-maximize-panel;
+  }
+
+  .scxPanelRestore {
+    @extend .icon-restore-panel;
+  }
+
+  .scxPanelScrollToLast {
+    @extend .icon-scroll-end;
+  }
+

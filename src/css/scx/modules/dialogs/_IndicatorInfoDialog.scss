@@ -1,0 +1,51 @@
+/* Indicator info dialog */
+
+.scxIndicatorInfoDialog {
+
+  &__header {
+    padding-bottom: 5px;
+  }
+
+  &__title {
+
+  }
+
+  &__body {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-height: 40px;
+
+    .scxIndicatorHelp {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 3px;
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  &__footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &__noInfo {
+    margin: 10px 0;
+  }
+
+  .scxWaitingBarContainer {
+    background-color: transparent !important;
+    padding: 15px 0;
+  }
+
+  .modal-dialog {
+    width: 30em;
+
+    @media (max-width: 400px) {
+      width: 20em;
+    }
+  }
+}

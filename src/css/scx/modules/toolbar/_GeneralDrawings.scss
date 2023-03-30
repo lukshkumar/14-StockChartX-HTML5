@@ -1,0 +1,84 @@
+/* General drawings */
+
+.scxToolbarGeneralDrawings {
+
+  .scxToolbarButton-activateBtn {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      margin: 0;
+      pointer-events: none;
+      padding-right: 7px;
+      padding-top: 4px;
+    }
+
+    &[data-scxvalue="text"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-text;
+      }
+    }
+
+    &[data-scxvalue="image"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-image;
+      }
+    }
+
+    &[data-scxvalue="balloon"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-balloon;
+      }
+    }
+
+    &[data-scxvalue="measure"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-measure;
+      }
+    }
+  }
+
+  &.activated {
+    .scxToolbarButton-activateBtn {
+      .scxToolbarButton-dropdownElement-image {
+        color: $defaultBorderColorActivated;
+      }
+    }
+  }
+
+  .scxToolbarButton-dropdownElement {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      padding-top: 4px;
+      text-align: center;
+    }
+
+    &[data-scxvalue="text"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-text;
+      }
+    }
+
+    &[data-scxvalue="image"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-image;
+      }
+    }
+
+    &[data-scxvalue="balloon"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-balloon;
+      }
+    }
+
+    &[data-scxvalue="measure"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-drawing-measure;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+/***************************
+***                      ***
+*** Light theme settings ***
+***                      ***
+****************************/
+
+$themeName: "Light";
+$isLightTheme: true;
+$textColor: #333;
+$dialogDividerColor: transparent;
+$dropdownBtnBorderColor: #CCC;
+$spectrumBorderColor: #C2C2C2;
+$boxShadow: 0 0 11px -1px rgba(150, 150, 150, 0.8);
+$dropdownMenuTextColor: #333;
+$dropdownMenuActiveBackgroundColor: rgb(232, 232, 232);
+$dropDownMenuShadow: 0 1px 10px rgba(0, 0, 0, 0.17);
+$dropdownMenuItemTextColor: #000000;
+$dropdownMenuSelectedItemTextColor: #4a4a4a;
+$dropdownMenuSelectedItemBackgroundColor: rgba(232, 232, 232, 1);
+$dropdownMenuHoverColor:  rgba(234,234,234,0.7);
+$dropdownTextColor: #4a4a4a;
+$dropdownIconColor: #4a4a4a;
+$dropdownActiveIconColor: #555;
+$toolbarBorderColor: #AFAFAF;
+$borderColorActivated: #5EC6E8;
+$fullScreenBackgroundColor: #FFF;
+$backgroundColor: #FFF;
+$textColorOnHover: #222;
+$iconColorOnHover: #222;
+$btnWrapperBackground: #DDD;
+$toolbarTextColor: #555;
+$toolbarIconColor: #555;
+$toolbarButtonsBorderColor: #808080;
+$toolbarButtonToggleBtnColor: #CCC;
+$inputBackgroundColor: #FFF;
+$waitingBarBackgroundColor: rgba(255, 255, 255, 0.6);
+$waitingBarTextColor: #6B6B6B;
+$waitingBarDotColor: #A7A7A7;
+$disabledElementColor: #EBEBEB;
+$dropdownDisabledColor: #EEE;
+$disabledTextColor: #AAA;
+$contextMenuDisabledTextColor: #CCC;
+$navigationBtnHoverColor: rgba(226, 226, 226, 0.80);
+$navigationDivHoverColor: rgba(183, 183, 183, 0.87);
+$tabsItemColor: #777;
+$tabsActiveItemColor: #333;
+$tabsActiveItemHighlightColor: #03A9F4;
+$tabsBottomLineColor: rgba(0, 0, 0, 0.2);
+$instrumentSearchTextColor: #555;
+$timeFramePickerButtonTextColor: #555;
+$timeFramePickerCustomValueTextColor: #c8c8c8;
+$timeFramePickerCustomValueBorderColor: #c8c8c8;
+$instrumentSearchResultsBorderColor: #AFAFAF;
+$instrumentSearchResultsHighlightedTextColor: #0DA4FA;
+$popoverArrowColor: rgba(0, 0, 0, 0.30);
+$buttonGroupActiveItemTextColor: #333;
+$buttonGroupActiveItemBackgroundColor: #E6E6E6;
+$contextMenuBorderColor: rgba(0, 0, 0, 0.2);
+$contextMenuDividerColor: #CCC;
+$colorPickerButtonHoverBorderColor: #7A7A7A;
+$colorPickerButtonHoverBackgroundColor: #F5F5F5;
+$switcheryBackgroundColor: #FFF;
+$switcheryBorderColor: #DFDFDF;
+$dialogCloseButtonColor: #000000;
+$dialogCloseButtonShadow: 0 1px 0 #FFFFFF;
+$indicatorsDialogSearchIconBackgroundColor: #FFF;
+$indicatorsDialogSearchIconBorderColor: #B7B7B7;
+$numericFieldArrowColor: #333;
+$watermarkInfoAndSymbol: rgb(217, 219, 221);
+$chartContainerBorder: 1px solid #808080;
+// Navigation buttons
+$navigationBtnColor: #808080;
+$navigationBtnColorOnHover: #000;
+
+//Chart panel controls
+$chartPanelTitleButtonColor: #808080;
+$chartPanelTitleButtonColorOnHover: #000;
+
+//Scrollbar
+$resizeDelimiterColor: #808080;
+$scrollbarColor: #E4E4E4;
+$scrollingPanelColor: #bdbdbd;

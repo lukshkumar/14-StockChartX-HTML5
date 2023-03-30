@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title>StockChartX Web & Mobile - Demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="img/favicon/favicon-152.png"
+    />
+    <link rel="shortcut icon" href="img/favicon/favicon-32.png" />
+
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet" />
+    <% } %>
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body id="scxBody" class="scxThemeDark">
+    <div id="chartContainer"></div>
+
+    <div id="footer">
+      <a
+        class="logo"
+        title="StockChartX Web & Mobile"
+        href="http://www.modulusglobal.com/products/web-mobile-stock-chart-library/stockchartx-web-mobile/"
+      >
+        <div class="logoTitle">
+          <p class="mainTitle">StockChartX</p>
+          <p class="organizationMark">&trade;</p>
+          <div class="textSeparator"></div>
+          <p class="secondaryText">Web & Mobile Edition</p>
+        </div>
+        <div class="logoImg"></div>
+      </a>
+      <p class="copyright">
+        Copyright 2014 by Modulus Financial Engineering, Inc.
+      </p>
+    </div>
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) {
+    if(chunk.includes("StockChartX")){ %>
+    <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% }} %>
+    <script src="scripts/custom-indicator.js"></script>
+    <script src="scripts/chart-constructor.js"></script>
+    <script src="scripts/single-chart.js"></script>
+  </body>
+</html>

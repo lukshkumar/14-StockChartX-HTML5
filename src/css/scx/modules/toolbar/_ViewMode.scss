@@ -1,0 +1,51 @@
+/* View mode */
+
+.scxToolbarViewMode {
+
+  .scxToolbarButton-activateBtn {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      margin: 0;
+      pointer-events: none;
+      padding-right: 7px;
+      padding-top: 4px;
+    }
+
+    .scxToolbarButton-dropdownElement-image {
+      @extend .icon-full-window;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  &:not(.scxToolbarButtonWithDropdown):not(.scxToolbarButton-dropdownWrapper) {
+  }
+
+  .scxToolbarButton-dropdownElement {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      padding-top: 4px;
+      text-align: center;
+    }
+
+    &[data-scxvalue="toggleFullWindow"] {
+
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-full-window;
+      }
+    }
+
+    &[data-scxvalue="toggleFullScreen"] {
+
+      .scxToolbarButton-dropdownElement-image {
+        @extend  .icon-full-screen;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+window.jQuery = require("jquery");
+window.$ = window.jQuery;
+require("./jquery-ui.min.js");
+require("bootstrap");
+require("intl");
+require("es6-promise");
+window.moment = require("moment");
+window.i18nextXHRBackend = require("i18next-xhr-backend");
+window.jqueryI18next = require("jquery-i18next");
+require("./bootstrap.v3.datetimepicker.min");

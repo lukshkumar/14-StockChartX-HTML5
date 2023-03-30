@@ -1,0 +1,370 @@
+/*Fibonacci Drawing dialog */
+
+#scxFibonacciDrawingDialog {
+
+  @media (min-width: 1px) {
+
+    .modal-dialog {
+      width: 20em;
+
+      .modal-content {
+
+        .scxFibonacciDrawingDialog-body {
+
+          .scxTabs {
+            margin-bottom: 1.2em;
+          }
+
+          .scxLineStyleSelector,
+          .scxFibonacciDrawingDialog_input_labelsPosition,
+          .scxFibonacciDrawingDialog_input_labelsTextPosition{
+            width: 9.05em;
+          }
+
+          .scxFibonacciDrawingDialog_input_lineWidth {
+            width: 3.2857em;
+          }
+
+          .scxFibonacciDrawingDialog_panel_addLinePanel {
+            margin-left: 6.26em;
+          }
+
+          .scxFibonacciDrawingDialog_label_lineLevel {
+            padding-left: 1.7em;
+          }
+
+          .scxFibonacciDrawingDialog_label_lineWidth {
+            padding-left: 1.3em;
+          }
+
+          #scxDrawingDialog_panel_magnetTo_selector {
+            .scxMagnetSelector {
+              width: 8.55em;
+            }
+
+            .scxMagnetSelector .scx_switchery {
+              margin-top: 5px;
+            }
+          }
+
+          .scxFibonacciDrawingDialog_panel_figure_retracementsOptions {
+
+            label {
+              width: 3.5em;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+
+    .scxCoordinate-input {
+      width: 6.61em;
+      text-align: center;
+    }
+
+    .scxCoordinateTable tr td:first-child {
+      vertical-align: bottom !important;
+      padding-right: 7px !important;
+      padding-bottom: 16px !important;
+    }
+
+    .scxCoordinateTable tr td:nth-child(2) {
+      width: 12em !important;
+      .scxCoordinate-input {
+        width: 12em !important;
+      }
+    }
+
+    .scxCoordinate-datetimepicker {
+      text-align: center;
+      width: 12em;
+    }
+
+    .scxCoordinate-type-container {
+      text-align: center;
+      margin-bottom: 2px;
+
+      .scxCoordinate-type-item:not(:last-child) {
+        border-right: 1px solid rgb(98, 98, 98);
+      }
+    }
+
+    .scxCoordinate-type-item {
+      display: inline-block;
+      padding: 0 4px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &.active {
+        color: rgba(255, 65, 65, 0.8);
+      }
+    }
+  }
+
+  @media (min-width: 400px) {
+
+    .modal-dialog {
+      width: 31.1em;
+
+      .modal-content {
+
+        .scxFibonacciDrawingDialog-body {
+
+          #scxTooltipView {
+            .scxLineStyleSelector {
+              margin-bottom: 0 !important;
+            }
+
+            .scxFontDropdown {
+              width: 10.4333em;
+            }
+          }
+
+          .scxLineStyleSelector,
+          .scxFibonacciDrawingDialog_input_labelsPosition,
+          .scxFibonacciDrawingDialog_input_labelsTextPosition{
+            width: 8.75em;
+          }
+
+          .scxFibonacciDrawingDialog_input_lineWidth {
+            width: 3.0857em;
+          }
+
+          .scxFibonacciDrawingDialog_input_lineLevel {
+            width: 4.35em;
+          }
+
+          .scxFibonacciDrawingDialog_panel_addLinePanel {
+            margin-left: 11em;
+          }
+
+          .scxFibonacciDrawingDialog_label_lineLevel {
+            padding-left: 4.2em;
+          }
+
+          .scxFibonacciDrawingDialog_label_lineWidth {
+            padding-left: 3.1em;
+          }
+
+          .scxFibonacciDrawingDialog_panel_figure_retracementsOptions {
+
+            label {
+              width: 3em;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .modal-dialog {
+      width: 38em;
+
+      .modal-content {
+
+        .scxFibonacciDrawingDialog-body {
+
+          .scxLineStyleSelector,
+          .scxFibonacciDrawingDialog_input_labelsPosition,
+          .scxFibonacciDrawingDialog_input_labelsTextPosition {
+            width: 13.75em;
+          }
+
+          .scxFibonacciDrawingDialog_input_lineWidth {
+            width: 3.65572em;
+          }
+
+          .scxFibonacciDrawingDialog_input_lineLevel {
+            width: 5.05em;
+          }
+
+          .scxFibonacciDrawingDialog_panel_addLinePanel {
+            margin-left: 14em;
+          }
+
+          .scxFibonacciDrawingDialog_label_lineLevel {
+            padding-left: 4.7em;
+          }
+
+          .scxFibonacciDrawingDialog_label_lineWidth {
+            padding-left: 4.1em;
+          }
+
+          .scxFibonacciDrawingDialog_panel_figure_retracementsOptions {
+
+            label {
+              width: 7em;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .scxFibonacciDrawingDialog-body {
+    height: 38em;
+    overflow: auto;
+    padding: 1em;
+
+    table {
+
+      td {
+
+        .sp-replacer {
+          margin: 0 0.5833em;
+        }
+      }
+    }
+
+    .scxFibonacciDrawingDialog_panel_figure,
+    .scxFibonacciDrawingDialog_panel_figure_trendLine {
+      @include dialogsPanelFigure();
+    }
+
+    .scxFibonacciDrawingDialog_panel_figure_linePanel,
+    .scxFibonacciDrawingDialog_panel_figure_trendLine {
+
+      td {
+
+        &:last-child {
+
+          & > * {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    .scxFibonacciDrawingDialog_label_lineLevel {
+      padding-left: 4.7em;
+    }
+
+    .scxFibonacciDrawingDialog_label_lineWidth {
+      padding-left: 4.1em;
+    }
+
+    .scxFibonacciDrawingDialog_label_trendLine {
+      text-align: center;
+      width: 6.18572em;
+      padding: 0 0.3em;
+      margin-bottom: 0;
+    }
+
+    .scxFibonacciDrawingDialog_label {
+      padding-left: 0.3em;
+    }
+
+    .scxFibonacciDrawingDialog_levelsPrice,
+    .scxFibonacciDrawingDialog_levelsPercent,
+    .scxFibonacciDrawingDialog_extendVer,
+    .scxFibonacciDrawingDialog_extendHor,
+    .scxFibonacciDrawingDialog_labelsPosition,
+    .scxFibonacciDrawingDialog_reverse {
+      display: inline-block;
+    }
+
+    .scxFibonacciDrawingDialog_panel_figure_lineEnabled,
+    .scxFibonacciDrawingDialog_panel_figure_trendEnabled {
+      margin: 0.416639em;
+    }
+
+    .scxFibonacciDrawingDialog_panel_addLinePanel {
+      padding: 0.0834em 0;
+      margin-left: 14em;
+      color: #46c67a;
+      opacity: .7;
+      text-shadow: none;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1;
+      text-align: right;
+
+      &:hover {
+        color: #3f7f3f;
+        text-decoration: none;
+      }
+
+      &:focus {
+        color: #46c67a;
+        text-decoration: none;
+      }
+    }
+
+    .scxLineStyleSelector,
+    .scxFibonacciDrawingDialog_input_labelsPosition,
+    .scxFibonacciDrawingDialog_input_labelsTextPosition {
+      background-color: $defaultInputBackgroundColor;
+      margin: 0.5em 0.5833em;
+      width: 13.75em;
+
+      .dropdown-menu {
+
+        &.selectpicker {
+          @include dropdownMenu();
+        }
+      }
+
+      &:active {
+        background-color: #000000;
+      }
+    }
+
+    .scxFibonacciDrawingDialog_input_text {
+      background-color: $defaultInputBackgroundColor;
+      color: $defaultToolbarTextColor;
+      border-color: $defaultDropdownBtnBorderColor;
+    }
+
+    .scxFibonacciDrawingDialog_input_lineStyle {
+
+      &:disabled {
+
+        & + .bootstrap-select {
+          background-color: $defaultDropdownDisabledColor;
+        }
+      }
+    }
+
+    .scxFibonacciDrawingDialog_input_lineWidth {
+      display: inline-block;
+      width: 3.65572em;
+    }
+
+    .scxFibonacciDrawingDialog_input_lineLevel {
+      display: inline-block;
+      width: 5.05em;
+    }
+
+    .scxFibonacciDrawingDialog_panel_deleteLinePanel {
+      padding: 0.2834em 0;
+      color: #FF0000;
+      opacity: .7;
+      text-shadow: none;
+      font-size: 28px;
+
+      &:hover {
+        color: #BF1010;
+      }
+    }
+
+    .scxFibonacciDrawingDialog_label_trendLine {
+      padding-left: 0;
+      margin-left: -7px;
+      margin-right: 6px;
+    }
+  }
+
+  #scxFibonacciDrawingDialog_btn_resetToDefaults {
+    float: left;
+
+    @media screen and (max-width: 400px) {
+      float: none;
+    }
+  }
+}

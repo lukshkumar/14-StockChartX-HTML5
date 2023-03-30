@@ -1,0 +1,188 @@
+#scxTooltipView {
+
+  @media (min-width: 1px) {
+    #scxTooltipView_input_TextFont {
+      width: 10.3em;
+    }
+
+    #scxTooltipView_region_borderPanel {
+      .scxLineStyleSelector {
+        width: 8.05em;
+      }
+
+      .scxLineStyleSelector, .scx_switchery {
+        margin-top: 5px;
+      }
+    }
+
+  }
+
+  @media (min-width: 400px) {
+    #scxTooltipView_input_TextFont {
+      width: 6.3333em;
+    }
+
+    #scxTooltipView_region_borderPanel {
+      #scxTooltipView_input_borderWidth {
+        width: 4.2857em;
+      }
+
+      .scxLineStyleSelector {
+        width: 10.75em;
+      }
+
+      .scxLineStyleSelector, .scx_switchery {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    #scxTooltipView_input_TextFont {
+      width: 13.3em;
+    }
+
+    #scxTooltipView_region_borderPanel {
+      #scxTooltipView_input_borderWidth {
+        width: 4.2857em;
+      }
+
+      .scxLineStyleSelector, .scx_switchery {
+        margin-top: 0;
+      }
+    }
+  }
+
+  #scxTooltipView_region_tooltip {
+    @include dialogsPanelFigure();
+
+    table {
+      width: auto;
+    }
+  }
+
+  #scxTooltipView_region_text table,
+  #scxTooltipView_region_image table {
+    width: 100%;
+  }
+
+  #scxTooltipView_region_image {
+    width: 100%;
+
+    td {
+
+      &:first-child {
+        width: 8%;
+      }
+
+      & > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .scxTooltipView_image_previewWrapper {
+    background: $defaultInputBackgroundColor center no-repeat;
+    border: 1px solid $defaultDropdownBtnBorderColor;
+  }
+
+  #scxTooltipView_input_tooltipText {
+    background-color: $defaultInputBackgroundColor;
+    color: $defaultToolbarTextColor;
+    border-color: $defaultDropdownBtnBorderColor;
+  }
+
+  #scxTooltipView_input_textSize + .bootstrap-select {
+    width: 5em;
+    margin: 0;
+  }
+
+  #scxTooltipView_input_textColor + .sp-replacer {
+    margin-top: 5px;
+  }
+
+  #scxTooltipView_input_borderWidth {
+    display: inline-block;
+    vertical-align: middle;
+    width: 4.2857em;
+  }
+
+  .scxTooltipView_input_borderStyle {
+    margin-right: 7px;
+  }
+
+  #scxTooltipView_input_tooltipText {
+    height: 14.2859em;
+    width: 100%;
+    resize: none;
+  }
+
+  #scxTooltipView_input_imageURL {
+    width: 100%;
+  }
+
+  .scxTooltipView_image_previewWrapper {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 21.4287em;
+    padding: 0.1429em;
+    overflow: hidden;
+    position: relative;
+
+    &.scxHasBg {
+      background-image: url("#{$imgPath}/NoImage.png") !important;
+    }
+
+    &.scxLoading {
+      background-image: url("#{$imgPath}/Loading_16x16.gif") !important;
+    }
+  }
+
+  #scxTooltipView_image_preview {
+    max-height: inherit;
+    max-width: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+
+  .scxLineStyleSelector {
+
+    &:active {
+      background-color: #000000;
+    }
+  }
+
+  .scxTooltipView_tooltipTextStyles {
+
+    label {
+      &.scxTooltipView_label_textBold {
+        background-image: url("#{$imgPath}/TextBold24White.png");
+
+        &.active {
+          background-image: url("#{$imgPath}/TextBold24.png");
+        }
+      }
+
+      &.scxTooltipView_label_textItalic {
+        background-image: url("#{$imgPath}/TextItalic24White.png");
+
+        &.active {
+          background-image: url("#{$imgPath}/TextItalic24.png");
+        }
+      }
+
+      &.scxTooltipView_label_textUnderline {
+        background-image: url("#{$imgPath}/TextUnderline24White.png");
+
+        &.active {
+          background-image: url("#{$imgPath}/TextUnderline24.png");
+        }
+      }
+    }
+  }
+}

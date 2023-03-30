@@ -1,0 +1,80 @@
+/* Context menu */
+
+$menuItemWithSubMenuBackgroundImage: url("#{$imgPath}/ContextMenuArrow.png");
+$menuItemCheckedBackgroundImage: url("#{$imgPath}/ContextMenuCheckbox.png");
+
+.scxContextMenu {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,.2);
+  border-left: 1px solid rgba(255,255,255,.2);
+
+  background-color: #181818;
+  box-shadow: $defaultBoxShadow;
+
+  .scxFullScreen & {
+    z-index: $fullScreenZIndex;
+  }
+
+  .scxMenuItemWithSubMenu {
+
+    & > a {
+      background-image: $menuItemWithSubMenuBackgroundImage;
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+  }
+
+  &.dropdown-menu {
+    overflow: auto;
+    font-size: 1em;
+
+    .scxSubMenu {
+      position: absolute;
+      top: inherit;
+      left: 100%;
+      visibility: hidden;
+      margin: -0.0833em 0 0 -0.0833em;
+
+      border: 0;
+      border-left: 1px solid #E5E5E5;
+      
+      box-shadow: $defaultBoxShadow;
+    }
+
+    .divider {
+      background-color: #373737;
+    }
+
+    li:hover {
+
+      .scxSubMenu {
+        visibility: visible;
+        display: block;
+      }
+    }
+  }
+
+  .scxMenuItemCheckable {
+
+    &.scxMenuItemChecked {
+
+      & > a {
+        background-image: $menuItemCheckedBackgroundImage;
+        background-repeat: no-repeat;
+        background-position: left center;
+      }
+    }
+  }
+
+  & > li {
+
+    & > a {
+      color: #FFFFFF;
+
+      &:hover {
+        background-color: $defaultDropdownMenuHoverColor;
+        color: $defaultTextColor;
+      }
+    }
+  }
+}

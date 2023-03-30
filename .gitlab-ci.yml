@@ -1,0 +1,163 @@
+stages:
+    - analyze
+    - deploy
+    - cleanup
+
+image: registry.git.magnise.com/modulus.stockchartx.html5/stockchartx:latest
+
+.generic-joc: &generic-job
+    before_script:
+        - npm update
+    tags:
+        - web
+
+# Code analyzing
+
+analyze:
+    stage: analyze
+    <<: *generic-job
+    script:
+        - gulp analyze
+    only:
+        - branches@Modulus.StockChartX.Html5/StockChartX
+
+# Deploy job templates
+
+.deploy-alpha-job: &deploy-alpha-job
+    stage: deploy
+    <<: *generic-job
+    script:
+        # Extract issue number
+        - if [[ $CI_BUILD_REF_NAME =~ (feature/)?[Ii]ssue_#([0-9]+) ]]; then export SCX_ISSUE_NUMBER=${BASH_REMATCH[2]}; fi
+        - if [[ -z $SCX_ISSUE_NUMBER ]]; then exit 0; fi
+        # Build
+        - ./node_modules/.bin/gulp build:release-cmd --license=$SCX_LICENSE --client=$SCX_BETA_CLIENT --domain=$SCX_BETA_DOMAIN --vrcode=$SCX_BETA_VRCODE
+        # Upload onto ftp
+        - lftp -e "set ssl:verify-certificate false; set ftp:ssl-protect-data true; mirror --delete-first --recursion=always --reverse deploy $ALPHA_FTP_PATH/$SCX_ISSUE_NUMBER/$SCX_LICENSE; wait all;" -u $BETA_FTP_USER,$BETA_FTP_PWD $BETA_FTP
+    only:
+        - branches@Modulus.StockChartX.Html5/StockChartX
+    except:
+        - /^(?!(feature\/)?[Ii]ssue_#\d+).*$/
+
+.deploy-beta-job: &deploy-beta-job
+    stage: deploy
+    <<: *generic-job
+    script:
+        # Build
+        - ./node_modules/.bin/gulp build:release-cmd --license=$SCX_LICENSE --client=$SCX_BETA_CLIENT --domain=$SCX_BETA_DOMAIN --vrcode=$SCX_BETA_VRCODE
+        # Upload onto ftp
+        - lftp -e "set ssl:verify-certificate false; set ftp:ssl-protect-data true; mirror --delete-first --recursion=always --reverse deploy $BETA_FTP_PATH/$SCX_LICENSE; wait all;" -u $BETA_FTP_USER,$BETA_FTP_PWD $BETA_FTP
+    only:
+        - develop@Modulus.StockChartX.Html5/StockChartX
+        - triggers
+
+.deploy-release-job: &deploy-release-job
+    stage: deploy
+    <<: *generic-job
+    script:
+        # Build
+        - ./node_modules/.bin/gulp build:release-cmd --license=$SCX_LICENSE --client=$SCX_BETA_CLIENT --domain=$SCX_BETA_DOMAIN --vrcode=$SCX_BETA_VRCODE
+        # Upload onto ftp
+        - lftp -e "set ssl:verify-certificate false; set ftp:ssl-protect-data true; mirror --delete-first --recursion=always --reverse deploy $RELEASE_FTP_PATH/$SCX_LICENSE; wait all;" -u $BETA_FTP_USER,$BETA_FTP_PWD $BETA_FTP
+    only:
+        - master@Modulus.StockChartX.Html5/StockChartX
+        - triggers
+
+
+# Alpha version deployment
+deploy-alpha-free:
+    <<: *deploy-alpha-job
+    environment:
+        name: alpha-free
+        url: https://$ALPHA_FREE_URL
+    variables:
+        SCX_LICENSE: free
+
+deploy-alpha-lite:
+    <<: *deploy-alpha-job
+    environment:
+        name: alpha-lite
+        url: https://$ALPHA_LITE_URL
+    variables:
+        SCX_LICENSE: lite
+
+deploy-alpha-full:
+    <<: *deploy-alpha-job
+    environment:
+        name: alpha-full
+        url: https://$ALPHA_FULL_URL
+    variables:
+        SCX_LICENSE: full
+
+
+# Beta version deployment
+deploy-beta-free:
+    <<: *deploy-beta-job
+    environment:
+        name: beta-free
+        url: https://$BETA_FREE_URL
+    variables:
+        SCX_LICENSE: free
+
+deploy-beta-lite:
+    <<: *deploy-beta-job
+    environment:
+        name: beta-lite
+        url: https://$BETA_LITE_URL
+    variables:
+        SCX_LICENSE: lite
+
+deploy-beta-full:
+    <<: *deploy-beta-job
+    environment:
+        name: beta-full
+        url: https://$BETA_FULL_URL
+    variables:
+        SCX_LICENSE: full
+
+
+# Release version deployment
+deploy-release-free:
+    <<: *deploy-release-job
+    environment:
+        name: release-free
+        url: https://$RELEASE_FREE_URL
+    variables:
+        SCX_LICENSE: free
+
+deploy-release-lite:
+    <<: *deploy-release-job
+    environment:
+        name: release-lite
+        url: https://$RELEASE_LITE_URL
+    variables:
+        SCX_LICENSE: lite
+
+deploy-release-full:
+    <<: *deploy-release-job
+    environment:
+        name: release-full
+        url: https://$RELEASE_FULL_URL
+    variables:
+        SCX_LICENSE: full
+
+
+# Cleaning
+clean-alpha:
+    stage: cleanup
+    script:
+        # Get list of remote directories and files
+        - dirs=$(lftp -e "set ssl:verify-certificate false; set ftp:ssl-protect-data true; rels $ALPHA_FTP_PATH; wait all;" -u $BETA_FTP_USER,$BETA_FTP_PWD $BETA_FTP)
+        # Get issue numbers (issue number is a directory name)
+        - issues=$(echo "$dirs" | grep -Po "<DIR>.+" | grep -Po "\d+" || echo '')
+        # Get only closed issues
+        - closed_issues=()
+        - for issue in $issues; do [[ -n $(curl -vsH "$API_TOKEN_HEADER" $API_URL/projects/$CI_PROJECT_ID/issues?iid=$issue 2>&1 | grep "\"state\":\"closed\"") ]] && closed_issues=(${closed_issues[@]} $issue) ; done
+        - echo "The following issues are closed:"
+        - echo "${closed_issues[@]}"
+        # Remove ftp directories for closed issues
+        - for issue in ${closed_issues[@]}; do lftp -e "set ssl:verify-certificate false; set ftp:ssl-protect-data true; rm -r $ALPHA_FTP_PATH/$issue; wait all;" -u $BETA_FTP_USER,$BETA_FTP_PWD $BETA_FTP ; done
+    only:
+        - develop@Modulus.StockChartX.Html5/StockChartX
+    tags:
+        - web

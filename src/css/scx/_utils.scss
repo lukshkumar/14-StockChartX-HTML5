@@ -1,0 +1,127 @@
+$toolbarSpritePicHeight : 32;
+$toolbarSpritePicWidth  : 32;
+
+@mixin toolbar-dropDown-image-position($isActivated, $position) {
+  $left : 2 + ($toolbarSpritePicWidth * if($isActivated, 1, 0));
+  $top  : 2 + ($toolbarSpritePicHeight * ($position - 1));
+  background-position: -#{$left}px -#{$top}px;
+}
+
+@mixin toolbar-dropDown-list-item-image-position($position) {
+  $left : 32 * 2;
+  $top  : $toolbarSpritePicHeight * ($position - 1);
+  background-position: -#{$left}px -#{$top}px;
+}
+
+@mixin alignCenterXY($percentage: -50%) {
+  -moz-transform: translateX($percentage) translateY($percentage);
+  -ms-transform: translateX($percentage) translateY($percentage);
+  -webkit-transform: translateX($percentage) translateY($percentage);
+  -o-transform: translateX($percentage) translateY($percentage);
+  transform: translateX($percentage) translateY($percentage);
+}
+
+@mixin alignCenterY($percentage: -50%){
+  -moz-transform: translateY($percentage);
+  -ms-transform: translateY($percentage);
+  -webkit-transform: translateY($percentage);
+  -o-transform: translateY($percentage);
+  transform: translateY($percentage);
+}
+
+@mixin alignCenterX($percentage: -50%){
+  -moz-transform: translateX($percentage);
+  -ms-transform: translateX($percentage);
+  -webkit-transform: translateX($percentage);
+  -o-transform: translateX($percentage);
+  transform: translateX($percentage);
+}
+
+@mixin dropdownMenu() {
+  & > li {
+
+    &.selected {
+      background-color: $defaultDropdownMenuSelectedColor;
+      color: #4a4a4a;
+
+      & > a {
+        color: $defaultTextColorOnHover;
+
+        &:focus {
+          background-color: $defaultDropdownMenuSelectedColor;
+          color: $defaultTextColorOnHover;
+        }
+
+        &:hover {
+          color: $defaultTextColorOnHover;
+        }
+      }
+
+      &:hover {
+        background-color: $defaultDropdownMenuSelectedColor;
+        color: #4a4a4a;
+      }
+    }
+
+    &:hover {
+      background-color: $defaultDropdownMenuHoverColor;
+      color: $defaultToolbarTextColor;
+    }
+
+    & > a{
+      color: $defaultToolbarTextColor;
+
+      &:hover {
+        background-color: $defaultDropdownMenuHoverColor;
+        color: $defaultToolbarTextColor;
+      }
+
+      &:focus {
+        background-color: $defaultDropdownMenuSelectedColor;
+        color: $defaultTextColorOnHover;
+        outline-color: $defaultDropdownMenuSelectedColor;
+      }
+    }
+  }
+}
+
+@mixin spDisabled($color) {
+  border-color: $color !important;
+  background: $color !important;
+}
+
+@mixin dialogsPanelFigure() {
+  table {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+
+    td {
+      height: 4.166389em;
+
+      &:first-child {
+
+        label {
+          padding-top: 0.416639em;
+        }
+      }
+    }
+  }
+}
+
+@mixin noSelect() {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

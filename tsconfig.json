@@ -1,0 +1,29 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "declaration": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "removeComments": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "experimentalDecorators": true,
+    "pretty": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "lib": ["es2017", "dom"],
+    "types": ["node", "jquery", "mocha"],
+    "paths": {
+      "StockChartX/*": ["src/scripts/StockChartX/*"],
+      "StockChartX.UI/*": ["src/scripts/StockChartX.UI/*"],
+      "StockChartX.External/*": ["src/scripts/StockChartX.External/*"],
+      "external/*": ["src/scripts/external/*"],
+      "TASdk/*": ["src/scripts/TASdk/*"]
+    }
+  },
+  "exclude": ["node_modules", "deploy", "templates", "test", "**/*.spec.ts"]
+}

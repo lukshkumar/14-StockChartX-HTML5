@@ -1,0 +1,222 @@
+/* Theme dialog */
+
+#scxThemeDialog {
+
+  @media (min-width: 1px) {
+
+    .modal-dialog {
+      width: 20em;
+
+      .modal-content {
+
+        .scxThemeDialog-body {
+
+          & > table {
+            display: block;
+            width: 98%;
+          }
+
+          #scxThemeDialog_input_textFont {
+            width: 11.33333em;
+          }
+
+          .scxFontDropdown {
+            width: 11.3333em;
+          }
+        }
+
+        .scxThemeDialog-footer-buttons {
+          display: inline-block;
+        }
+
+        #scxThemeDialog_themeWrapper {
+
+          .bootstrap-select.btn-group .dropdown-menu li a span.text {
+            width: 3.5em;
+          }
+        }
+
+        #scxThemeDialog_input_theme {
+
+          & + .bootstrap-select {
+            margin-bottom: 5px;
+            width: 8.5em;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 400px) {
+
+    .modal-dialog {
+      width: 34em;
+
+      .modal-content {
+
+        .scxThemeDialog-body {
+
+          & > table {
+            display: inline-block;
+            width: 49%;
+          }
+
+          #scxThemeDialog_input_textFont {
+            width: 11.3333em;
+          }
+
+          .scxFontDropdown {
+            width: 11.3333em;
+          }
+
+          .scxThemeDialog-footer-buttons {
+            display: inline-block;
+          }
+
+          #scxThemeDialog_themeWrapper {
+
+            .bootstrap-select.btn-group .dropdown-menu li a span.text {
+              width: 3.5em;
+            }
+          }
+
+          #scxThemeDialog_input_theme {
+
+            & + .bootstrap-select {
+              width: 8.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    
+    .modal-dialog {
+      width: 50em;
+
+      .modal-content {
+
+        .scxThemeDialog-body {
+
+          & > table {
+            display: inline-block;
+            width: 49%;
+          }
+
+          #scxThemeDialog_input_textFont {
+            width: 13.3em;
+          }
+
+          .scxFontDropdown {
+            width: 13.3em;
+          }
+
+          #scxThemeDialog_input_theme {
+
+            & + .bootstrap-select {
+              width: 12.5em;
+            }
+          }
+
+          #scxThemeDialog_themeWrapper {
+
+            .bootstrap-select.btn-group .dropdown-menu li a span.text {
+              width: 7.8em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-dialog {
+
+    .modal-content {
+
+      .modal-header {
+
+        h4 {
+            width: calc(90% - 10px);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+      }
+
+      .scxThemeDialog-body {
+        overflow: auto;
+
+        & > table {
+          vertical-align: top;
+
+          td {
+            vertical-align: middle;
+            padding: 0.6667em 0.33339em;
+
+            &.scxInline {
+              width: 7em;
+            }
+          }
+
+        }
+
+        label {
+          font-weight: normal;
+          margin-bottom: 0;
+
+          &.disabled {
+            color: $defaultDisabledTextColor;
+          }
+        }
+
+        #scxThemeDialog_input_textSize {
+
+          & + .bootstrap-select {
+            width: 5em;
+          }
+        }
+
+        #scxThemeDialog_input_volumeWidth {
+          display: inline-block;
+          width: 5em;
+        }
+
+        #scxThemeDialog_input_newThemeName {
+          width: 10.143em;
+          font-size: 1em;
+          height: 2.8333em;
+          margin-bottom: 5px;
+          background-color: $defaultInputBackgroundColor;
+          border-color: $defaultDropdownBtnBorderColor;
+          color: $defaultToolbarTextColor;
+        }
+
+        #scxThemeDialog_themeWrapper {
+          margin-top: 5px;
+
+          & > * {
+            display: inline-block;
+            vertical-align: top;
+          }
+
+          .bootstrap-select.btn-group .dropdown-menu li a span.text {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+
+        #scxThemeDialog_newThemeWrapper {
+          display: none;
+
+          & > * {
+            display: inline-block;
+            vertical-align: top;
+          }
+        }
+      }
+    }
+  }
+}

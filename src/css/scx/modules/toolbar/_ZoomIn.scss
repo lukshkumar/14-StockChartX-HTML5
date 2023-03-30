@@ -1,0 +1,76 @@
+/* Zoom In */
+
+.scxToolbarZoomIn {
+
+  .scxToolbarButton-dropdownElement {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      pointer-events: none;
+      padding-right: 4px;
+      padding-top: 3px;
+      text-align: center;
+    }
+
+    &[data-scxvalue="dateRange"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-zoom-date-range;
+      }
+    }
+
+    &[data-scxvalue="rect"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend  .icon-zoom-rect;
+      }
+    }
+  }
+
+  .scxToolbarButton-activateBtn {
+
+    .scxToolbarButton-dropdownElement-image {
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      margin: 0;
+      pointer-events: none;
+      padding-right: 7px;
+      padding-top: 4px;
+      text-align: center;
+    }
+
+    &[data-scxvalue="dateRange"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-zoom-date-range;
+      }
+    }
+
+    &[data-scxvalue="rect"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend  .icon-zoom-rect;
+      }
+    }
+  }
+
+  &.activated {
+
+    .scxToolbarButton-dropdownElement-image{
+      color : $defaultBorderColorActivated;
+    }
+
+    .scxToolbarButton-activateBtn {
+
+      &[data-scxvalue="dateRange"] {
+        .scxToolbarButton-dropdownElement-image {
+          @extend .icon-zoom-date-range;
+        }
+      }
+
+      &[data-scxvalue="rect"] {
+        .scxToolbarButton-dropdownElement-image {
+          @extend  .icon-zoom-rect;
+        }
+      }
+    }
+  }
+}

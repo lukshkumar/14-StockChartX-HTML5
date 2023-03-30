@@ -1,0 +1,64 @@
+/* Cross hair types */
+
+.scxToolbarCrossHair {
+
+  .scxToolbarButton-activateBtn {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      margin: 0;
+      pointer-events: none;
+      padding-right: 7px;
+      padding-top: 4px;
+      text-align: center;
+  }
+
+    &[data-scxvalue="none"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-cursor-arrow;
+      }
+    }
+
+    &[data-scxvalue="markers"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-cursor-arrow-with-markers;
+      }
+    }
+
+    &[data-scxvalue="crossBars"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-cursor-crosshairs;
+      }
+    }
+  }
+
+  .scxToolbarButton-dropdownElement {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-size: 18px;
+      text-align: center;
+      padding-top: 5px;
+      color: $defaultToolbarIconColor;
+    }
+
+    &[data-scxvalue="none"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-cursor-arrow;
+      }
+    }
+
+    &[data-scxvalue="markers"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-cursor-arrow-with-markers;
+      }
+    }
+
+    &[data-scxvalue="crossBars"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-cursor-crosshairs;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+/* Delete drawing */
+
+.scxToolbarDelete {
+
+  .scxToolbarButton-activateBtn {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      margin: 0;
+      pointer-events: none;
+      padding-right: 7px;
+      padding-top: 4px;
+    }
+
+    &[data-scxvalue="deleteDrawing"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-delete-drawings;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  .scxToolbarButton-dropdownElement {
+
+    .scxToolbarButton-dropdownElement-image {
+      font-family: 'scx-icons';
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      padding-top: 4px;
+      text-align: center;
+    }
+
+    &[data-scxvalue="deleteAllDrawings"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-delete-drawings;
+      }
+    }
+
+    &[data-scxvalue="deleteAllIndicators"] {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-delete-indicators;
+      }
+    }
+  }
+}

@@ -1,0 +1,470 @@
+/* Toolbar */
+
+.scxToolbar {
+  // text-align: left;
+  @include clearfix();
+  display: inline-block;
+  min-height: 2.2142857142857144em;
+  padding-top: 0.07142857142857142em;
+
+  text-align: center;
+
+  .scxFullWindow &.scxPhone {
+    text-align: left;
+  }
+
+  & > * {
+    float: left;
+  }
+
+  & > input {
+    &.form-control {
+      font-size: 1em;
+    }
+  }
+}
+
+.scxToolbar-btn {
+  width: 40px;
+  height: 30px;
+  border-radius: 0;
+  cursor: pointer;
+  border: $defaultToolbarButtonsBorder;
+  background-color: transparent;
+  @include noSelect();
+
+  &.hover {
+    background-color: $defaultBtnWrapperBackground;
+    border-color: $defaultToolbarBorderColor;
+  }
+}
+
+.scxToolbar-delimiter {
+  width: 0.35714285714285715em;
+  height: 2.142857142857143em;
+  // background: transparent url("#{$imgPath}/ToolbarDelimiter.png") center no-repeat;
+}
+
+.scxToolbarButton {
+  font-size: 0.8571428571428571em;
+  position: relative;
+  width: 40px;
+  height: 30px;
+  display: inline-block;
+  @include noSelect();
+
+  &.scxToolbarButtonWithDropdown {
+    &.active {
+      .scxToolbarButton-buttonWrapper {
+        border-bottom: 0;
+      }
+
+      .scxToolbarButton-toggleDropdownBtn {
+        border-bottom: 1px dotted $defaultToolbarBorderColor;
+        height: 2.4166666666666665em;
+      }
+    }
+  }
+
+  &.active {
+    .scxToolbarButton-dropdownWrapper {
+      display: block;
+      max-height: 39em;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      width: 15.416666666666666em;
+    }
+
+    &.scxToolbarButtonWithDropdown {
+      .scxToolbarButton-toggleDropdownBtn {
+        display: inline-block;
+      }
+    }
+
+    .scxToolbarButton-buttonWrapper {
+      border: 1px solid $defaultToolbarBorderColor;
+      border-bottom-width: 0;
+      background-color: $defaultBackgroundColor;
+
+      .scxToolbarButton-toggleDropdownBtn {
+        border-color: $defaultToolbarBorderColor;
+      }
+    }
+  }
+
+  &.activated {
+    &.scxToolbarButtonWithDropdown {
+      .scxToolbarButton-toggleDropdownBtn {
+        display: inline-block;
+      }
+    }
+  }
+
+  .scxToolbarButton-buttonWrapper {
+    &.hover {
+      background-color: $defaultBtnWrapperBackground;
+      border-color: $defaultToolbarBorderColor;
+
+      .scxToolbarButton-toggleDropdownBtn {
+        border-color: $defaultToolbarBorderColor;
+      }
+    }
+  }
+
+  &.scxToolbarCanToggle {
+    &.activated {
+      .scxToolbarButton-buttonWrapper {
+        border: 1px solid $defaultBorderColorActivated;
+      }
+    }
+
+    &.active {
+      .scxToolbarButton-buttonWrapper {
+        border-bottom-width: 0;
+      }
+    }
+  }
+}
+
+.scxToolbarButton-buttonWrapper {
+  background-color: transparent;
+  border: $defaultToolbarButtonsBorder;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  & > * {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.scxToolbarButton-activateBtn {
+  background-color: transparent;
+  width: 3.1666666666666665em;
+  height: 2.3333333333333335em;
+  border: 0;
+}
+
+.scxToolbarButtonWithDropdown {
+  .scxToolbarButton-activateBtn {
+    width: 2.3333333333333335em;
+    margin-right: -0.4166666666666667em;
+  }
+
+  .scxToolbarButton-toggleDropdownBtn {
+    border: 0;
+    border-left: 1px dotted #404040;
+
+    .scxToolbarButton-dropdownElement-image {
+      @extend .icon-down;
+    }
+
+    width: 0.9166666666666666em;
+    height: 2.3333333333333335em;
+
+    display: inline-block;
+  }
+
+  &.active {
+    .scxToolbarButton-toggleDropdownBtn {
+      .scxToolbarButton-dropdownElement-image {
+        @extend .icon-up;
+      }
+    }
+  }
+
+  &.scxToolbarCanToggle {
+    &.activated {
+      .scxToolbarButton-toggleDropdownBtn {
+        border-color: $defaultBorderColorActivated;
+        background-position: -30px center;
+      }
+
+      &.active {
+        .scxToolbarButton-toggleDropdownBtn {
+          border-color: $defaultBorderColorActivated;
+          background-position: -44px center;
+        }
+      }
+    }
+
+    &.active {
+      .scxToolbarButton-toggleDropdownBtn {
+        background-position: -16px center;
+      }
+    }
+  }
+}
+
+.scxToolbarButton-toggleDropdownBtn {
+  display: none;
+  position: relative;
+  background-color: transparent;
+
+  .scxToolbarButton-dropdownElement-image {
+    font-family: "scx-icons";
+    color: $defaultToolbarIconColor;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    left: -5px;
+  }
+}
+
+.scxToolbarButton-dropdownWrapper {
+  font-size: 12px;
+  text-align: left;
+  color: $defaultToolbarTextColor;
+  background-color: $defaultBackgroundColor;
+  border: 1px solid $defaultToolbarBorderColor;
+  border-top: 0;
+  display: none;
+  position: fixed;
+  top: -1000em;
+  left: -1000em;
+  z-index: 1000;
+
+  .scxToolbarButton-dropdownElementsContainer {
+    min-width: 4em;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .scxFullScreen & {
+    z-index: $fullScreenZIndex;
+  }
+
+  &.scxLeft:before,
+  &.scxRight:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    height: 0;
+    width: calc(100% - 38px);
+    border-top: 1px solid $defaultToolbarBorderColor;
+  }
+
+  &.scxLeft:before {
+    left: 0;
+  }
+
+  &.scxRight:before {
+    left: 39px;
+  }
+
+  &.activated,
+  &.activated:before {
+    border-color: $defaultBorderColorActivated;
+  }
+
+  .scxTimeFramePicker-CustomValueWrapper {
+    .scxTimeFramePicker-CustomValueUnits {
+      .selectpicker {
+        color: $defaultToolbarTextColor;
+        border: 1px solid $defaultDropdownBtnBorderColor;
+        background-color: $defaultInputBackgroundColor;
+
+        &:active {
+          background-color: #000000;
+          outline: transparent !important;
+        }
+      }
+
+      .btn {
+        &:focus {
+          outline: transparent !important;
+        }
+      }
+    }
+
+    .scxTimeFramePicker-CustomValuePlus {
+      color: $defaultToolbarTextColor;
+      border: 1px solid $defaultDropdownBtnBorderColor;
+      background-color: $defaultInputBackgroundColor;
+
+      &:active {
+        background-color: #000000;
+        outline: transparent !important;
+      }
+    }
+
+    .scxTimeFramePicker-CustomValueMinus {
+      color: $defaultToolbarTextColor;
+      border: 1px solid $defaultDropdownBtnBorderColor;
+      background-color: $defaultInputBackgroundColor;
+
+      &:active {
+        background-color: #000000;
+        outline: transparent !important;
+      }
+    }
+
+    .scxTimeFramePicker-CustomValueText {
+      color: $defaultToolbarTextColor;
+      border: 1px solid $defaultDropdownBtnBorderColor;
+      background-color: $defaultInputBackgroundColor;
+    }
+  }
+}
+
+.scxToolbarButton-dropdownElement {
+  height: 3em;
+  cursor: pointer;
+
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &.active {
+    background-color: $defaultDropdownMenuSelectedColor;
+    color: #4a4a4a;
+
+    &:hover {
+      background-color: $defaultDropdownMenuSelectedColor;
+    }
+
+    .scxToolbarButton-dropdownElement-text {
+      font-weight: bold;
+    }
+  }
+
+  &:hover {
+    background-color: $defaultDropdownMenuHoverColor;
+  }
+}
+
+.scxToolbarButton-dropdownElement-image {
+  background: transparent 0 0 no-repeat;
+  width: 32px;
+  height: 32px;
+  margin: 4px 3px 0;
+}
+
+.scxToolbarButton-dropdownElement-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.scxToolbarButton-dropdownWrapper.visible
+  .scxToolbarButton-dropdownElement-text {
+  width: calc(100% - 47px);
+}
+
+.scxToolbar-btn-indicators,
+.scxToolbar-btn-theme {
+  .scxToolbarButton-dropdownElement-image {
+    font-family: "scx-icons";
+    color: $defaultToolbarIconColor;
+    font-size: 18px;
+  }
+}
+
+.scxToolbar-btn-indicators {
+  .scxToolbarButton-dropdownElement-image {
+    @extend .icon-indicators;
+  }
+}
+
+.scxToolbar-btn-theme {
+  .scxToolbarButton-dropdownElement-image {
+    @extend .icon-theme;
+  }
+}
+
+.scxToolbar-btn-measure {
+  .scxToolbarButton-activateBtn {
+    // background: url("#{$imgPath}/ToolbarMeasure.svg") center no-repeat;
+  }
+
+  &.activated {
+    .scxToolbarButton-activateBtn {
+      // background: url("#{$imgPath}/ToolbarMeasureActive.svg") center no-repeat;
+    }
+  }
+}
+
+/* Show/Hide drawings*/
+
+.scxToolbar-btn-hideDrawings {
+  .scxToolbarButton-activateBtn {
+    .scxToolbarButton-dropdownElement-image {
+      font-family: "scx-icons";
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      pointer-events: none;
+      @extend .icon-show-drawings;
+    }
+  }
+
+  &.activated {
+    .scxToolbarButton-activateBtn {
+      .scxToolbarButton-dropdownElement-image {
+        color: $defaultBorderColorActivated;
+      }
+    }
+  }
+}
+
+.scxToolbar-btn-enableDrawingsTooltip {
+  .scxToolbarButton-activateBtn {
+    .scxToolbarButton-dropdownElement-image {
+      font-family: "scx-icons";
+      color: white;
+      font-size: 18px;
+      pointer-events: none;
+      @extend .icon-continuous-drawing;
+    }
+  }
+
+  &.activated {
+    .scxToolbarButton-activateBtn {
+      .scxToolbarButton-dropdownElement-image {
+        color: $defaultBorderColorActivated;
+      }
+    }
+  }
+}
+/* drawing mode */
+.scxToolbar-btn-stayInDrawingMode {
+  .scxToolbarButton-activateBtn {
+    .scxToolbarButton-dropdownElement-image {
+      font-family: "scx-icons";
+      color: $defaultToolbarIconColor;
+      font-size: 18px;
+      pointer-events: none;
+      @extend .icon-continuous-drawing;
+    }
+  }
+
+  &.activated {
+    .scxToolbarButton-activateBtn {
+      .scxToolbarButton-dropdownElement-image {
+        color: $defaultBorderColorActivated;
+      }
+    }
+  }
+}
+
+.scxToolbarSaveImage {
+  .scxToolbarButton-dropdownElement-image {
+    font-family: "scx-icons";
+    color: $defaultToolbarIconColor;
+    font-size: 18px;
+    pointer-events: none;
+    position: relative;
+    top: 2px;
+    @extend .icon-snapshot;
+  }
+}

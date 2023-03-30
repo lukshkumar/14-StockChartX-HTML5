@@ -1,0 +1,218 @@
+/* Indicator properties dialog */
+
+@media (min-width: 1px) {
+
+  .scxComboBox {
+
+    .dropdown-menu {
+
+      li a span.text {
+        width: 5.3333em;
+      }
+    }
+  }
+}
+
+@media (min-width: 400px) {
+
+  .scxComboBox {
+
+    .dropdown-menu {
+
+      li a span.text {
+        width: 10.3333em;
+      }
+    }
+  }
+}
+
+@media (min-width: 400px) {
+
+  .scxComboBox {
+
+    .dropdown-menu {
+
+      li a span.text {
+        width: 12.3333em;
+      }
+    }
+  }
+}
+
+#scxIndicatorDialog {
+
+  @media (min-width: 1px) {
+
+    .modal-dialog {
+      width: 20em;
+    }
+
+    label {
+      width: 5em;
+      text-align: left;
+    }
+
+    input {
+
+      &.scxNumeric {
+        width: 3.2857em;
+      }
+    }
+
+    .scxComboBox {
+      width: 10.7333em;
+    }
+  }
+
+  @media (min-width: 400px) {
+
+    .modal-dialog {
+      width: 30em;
+    }
+
+    label {
+      width: 7.3em;
+      text-align: left;
+    }
+
+    input {
+
+      &.scxNumeric {
+        width: 4.3857em;
+      }
+    }
+
+    .scxComboBox {
+      width: 18.3333em;
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .modal-dialog {
+      width: 37.498em;
+    }
+
+    label {
+      width: 12.5em;
+      text-align: right;
+    }
+
+    input {
+
+      &.scxNumeric {
+        width: 4.3857em;
+      }
+    }
+
+    .scxComboBox {
+      width: 18.3333em;
+    }
+  }
+
+  .modal-dialog {
+
+    .modal-content {
+      width: inherit;
+    }
+
+    .modal-header {
+
+      input {
+        &.form-control {
+          background-color: #EAEAEA;
+        }
+      }
+    }
+
+    .scxIndicatorDialog-body {
+      height: 24.999em;
+      overflow: auto;
+
+      form {
+
+        fieldset {
+
+          input {
+            background-color: $defaultInputBackgroundColor;
+            color: $defaultTextColor;
+            border-color: $defaultDropdownBtnBorderColor;
+          }
+        }
+      }
+    }
+  }
+
+  fieldset {
+
+    &> div {
+      min-width: 49%;
+      padding: 0.4167em 0 0.4167em 0.4167em;
+
+      & > * {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.25em !important;
+      }
+    }
+  }
+
+  label {
+    font-weight: normal;
+    padding-right: 0.8333em;
+  }
+
+  input {
+
+    &.form-control {
+      //width: 14.2859em;
+      font-size: 1.1666em;
+      height: 2.4287em;
+    }
+  }
+
+  .scxComboBox {
+    margin: 0;
+    text-align: center;
+
+    .dropdown-menu {
+      font-size: 1em;
+    }
+  }
+
+  .scxLineStyleSelector {
+    width: 10.416em;
+    margin: 0.5em 0;
+  }
+
+  .bootstrap-select {
+
+    &.btn-group {
+
+      .btn {
+        font-size: 1.1666em;
+        padding: 0.4287em 0.8573em;
+
+        .filter-option {
+          text-align: center;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 90%;
+        }
+      }
+
+      .dropdown-menu {
+        font-size: 1em;
+
+        li {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+#scxIndicatorDialog_container_line1 {
+  padding-top: 1.25em !important;
+}

@@ -1,0 +1,36 @@
+@import "plugins/ButtonGroup";
+@import "plugins/ColorPicker";
+@import "plugins/ContextMenu";
+@import "plugins/DropDown";
+@import "plugins/FontsDropDown";
+@import "plugins/LineStyleDropDown";
+@import "plugins/Tooltip";
+@import "plugins/Tabs";
+@import "plugins/Scrollbar";
+
+@import "modules/dialogs/DarvasBoxSettingsDialog";
+@import "modules/dialogs/DrawingSettingsDialog";
+@import "modules/dialogs/FibonacciDrawingSettingsDialog";
+@import "modules/dialogs/IchimokuIndicatorSettingsDialog";
+@import "modules/dialogs/IndicatorInfoDialog";
+@import "modules/dialogs/IndicatorSettingsDialog";
+@import "modules/dialogs/IndicatorsDialog";
+@import "modules/dialogs/PriceStyleSettingsDialog";
+@import "modules/dialogs/ThemeDialog";
+@import "modules/dialogs/OrderDialog";
+
+@import "modules/views/TooltipView";
+
+@import "modules/toolbar/ChartMarkerDrawings";
+@import "modules/toolbar/CrossHairTypes";
+@import "modules/toolbar/FibonacciDrawings";
+@import "modules/toolbar/GeneralDrawings";
+@import "modules/toolbar/GeometricDrawings";
+@import "modules/toolbar/InstrumentSearch";
+@import "modules/toolbar/PriceStyle";
+@import "modules/toolbar/TimeFramePicker";
+@import "modules/toolbar/Toolbar";
+@import "modules/toolbar/Trashes";
+@import "modules/toolbar/ViewMode";
+@import "modules/toolbar/TrendDrawings";
+@import "modules/toolbar/ZoomIn";

@@ -1,0 +1,23 @@
+#chartContainer1, #chartContainer2 {
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+}
+
+#chartContainer1.scxFullWindow + #footer,
+#chartContainer2.scxFullWindow + #footer {
+  display: none;
+}
+
+#chartContainer1.scxFullWindow + #recreationBtnContainer,
+#chartContainer2.scxFullWindow + #recreationBtnContainer {
+  display: none;
+}
+
+.scxRootContainer.scxFullWindow {
+  z-index: 22;
+}
+
+.scxScrollbar {
+  z-index: 21;
+}

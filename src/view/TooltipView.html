@@ -1,0 +1,126 @@
+<div id="scxTooltipView">
+    <div id="scxTooltipView_region_tooltip">
+        <table>
+            <tr id="scxTooltipView_region_borderPanel">
+                <td><label id="scxTooltipView_label_border" data-i18n="tooltipView.border"></label>
+                </td>
+                <td>
+                    <input id="scxTooltipView_input_borderColor" type="text" class="scxSpectrum">
+
+                    <input id="scxTooltipView_input_borderWidth" type="text" class="form-control">
+
+                    <select id="scxTooltipView_input_borderStyle"
+                            class="scxLineStyleSelector scxDropdown scxTooltipView_input_borderStyle">
+                        <option value="solid" data-manuali18="indicatorSettingsDialog.solid">&nbsp;</option>
+                        <option value="dash" data-manuali18="indicatorSettingsDialog.dash">&nbsp;</option>
+                        <option value="dot" data-manuali18="indicatorSettingsDialog.dot">&nbsp;</option>
+                        <option value="dash-dot" data-manuali18="indicatorSettingsDialog.dashDot">&nbsp;</option>
+                    </select>
+
+                    <input id="scxTooltipView_chk_borderColor" type="checkbox" class="js-switch"/>
+                </td>
+            </tr>
+
+            <tr id="scxTooltipView_region_fillPanel">
+                <td><label id="scxTooltipView_label_fillColor" data-i18n="tooltipView.fill"></label></td>
+                <td>
+                    <input id="scxTooltipView_input_fillColor" type="text" class="scxSpectrum">
+                    <input id="scxTooltipView_chk_fillColor" type="checkbox" class="js-switch"/>
+                </td>
+            </tr>
+
+            <tr id="scxTooltipView_region_kindPanel">
+                <td><label data-i18n="tooltipView.kind"></label></td>
+                <td>
+                    <div class="scxButtonGroup scxTooltipView_tooltipKind">
+                        <label class="btn btn-default scxTooltipView_label_kindText glyphicon glyphicon-font"
+                               title="Text" data-kind="text">
+                            <input type="checkbox" id="scxTooltipView_chk_kindText">
+                        </label>
+                        <label class="btn btn-default scxTooltipView_label_kindImage glyphicon glyphicon-picture"
+                               title="Image" data-kind="image">
+                            <input type="checkbox" id="scxTooltipView_chk_kindImage">
+                        </label>
+                        <label class="btn btn-default scxTooltipView_label_kindHTML glyphicon glyphicon-console"
+                               title="HTML" data-kind="html">
+                            <input type="checkbox" id="scxTooltipView_chk_kindHTML">
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="scxTooltipView_region_text">
+        <table>
+            <tr id="scxTooltipView_region_textStyle">
+                <td colspan="2" class="scxControls">
+                    <input id="scxTooltipView_input_textColor" type="text" class="scxSpectrum">
+
+                    <select id="scxTooltipView_input_textFont" class="scxDropdown scxFontDropdown">
+                        <option style="font-family:Arial;" value="Arial" data-i18n="fonts.arial"></option>
+                        <option style="font-family:Calibri;" value="Calibri" data-i18n="fonts.calibri"
+                                selected></option>
+                        <option style="font-family:'Comic Sans';" value="Comic Sans"
+                                data-i18n="fonts.comicSans"></option>
+                        <option style="font-family:'Courier New';" value="Courier New"
+                                data-i18n="fonts.courierNew"></option>
+                        <option style="font-family:Georgia;" value="Georgia" data-i18n="fonts.georgia"></option>
+                        <option style="font-family:Impact;" value="Impact" data-i18n="fonts.impact"></option>
+                        <option style="font-family:'Open Sans';" value="Open Sans" data-i18n="fonts.openSans"></option>
+                        <option style="font-family:'Source Sans Pro';" value="Source Sans Pro"
+                                data-i18n="fonts.sourceSansPro"></option>
+                        <option style="font-family:Tangerine;" value="Tangerine" data-i18n="fonts.tangerine"></option>
+                    </select>
+
+                    <select id="scxTooltipView_input_textSize" class="scxDropdown">
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                    </select>
+
+                    <div id="scxTooltipView_input_tooltipTextStyles"
+                         class="scxButtonGroup scxTooltipView_tooltipTextStyles">
+                        <label class="btn btn-default scxTooltipView_label_textBold">
+                            <input type="checkbox" id="scxTooltipView_chk_textBold">
+                        </label>
+                        <label class="btn btn-default scxTooltipView_label_textItalic">
+                            <input type="checkbox" id="scxTooltipView_chk_textItalic">
+                        </label>
+                        <label class="btn btn-default scxTooltipView_label_textUnderline">
+                            <input type="checkbox" id="scxTooltipView_chk_textUnderline">
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr id="scxTooltipView_region_tooltipText">
+                <td colspan="2">
+                    <textarea id="scxTooltipView_input_tooltipText" class="form-control"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="scxTooltipView_region_image">
+        <table>
+            <tr>
+                <td><input id="scxTooltipView_input_imageURL" class="form-control" placeholder="Image URL"
+                           type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="scxTooltipView_image_previewWrapper scxHasBg form-control">
+                        <img id="scxTooltipView_image_preview"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,140 @@
+/* Price Style Dialog */
+
+#scxPriceStyleDialog {
+  @media (min-width: 1px) {
+    .modal-dialog {
+      width: 20em;
+    }
+  }
+
+  @media (min-width: 400px) {
+    .modal-dialog {
+      width: 27em;
+    }
+  }
+
+  .scxPriceStyleDialog-body {
+    padding: 1em;
+
+    table {
+      td {
+        vertical-align: middle;
+        padding: 0.6667em 0.33339em;
+
+        label {
+          font-weight: normal;
+          margin: 0;
+        }
+
+        .sp-replacer {
+          margin: 0 0.5833em;
+        }
+      }
+    }
+
+    .scxPriceStyleDialog_input_source,
+    .scxPriceStyleDialog_input_boxSizeKind,
+    .scxPriceStyleDialog_input_barStyle,
+    .scxPriceStyleDialog_input_instrumentPriceStyle,
+    .scxPriceStyleDialog_input_coloredBarStyle {
+      background-color: $defaultInputBackgroundColor;
+      width: 10.2647em;
+      margin: 0;
+
+      .dropdown-menu {
+        &.selectpicker {
+          @include dropdownMenu();
+        }
+      }
+
+      &:active {
+        background-color: #000000;
+      }
+    }
+
+    .scxPriceStyleDialog_input_text {
+      background-color: $defaultInputBackgroundColor;
+      color: $defaultToolbarTextColor;
+      border-color: $defaultDropdownBtnBorderColor;
+    }
+
+    .scxPriceStyleDialog_input_source,
+    .scxPriceStyleDialog_input_boxSizeKind,
+    .scxPriceStyleDialog_input_barStyle,
+    .scxPriceStyleDialog_input_coloredBarStyle {
+      &:disabled {
+        & + .bootstrap-select {
+          background-color: $defaultDropdownDisabledColor;
+        }
+      }
+    }
+
+    .scxPriceStyleDialog_input_ATRLength,
+    .scxPriceStyleDialog_input_boxSize,
+    .scxPriceStyleDialog_input_pointsCount,
+    .scxPriceStyleDialog_input_reversalAmount,
+    .scxPriceStyleDialog_input_numberOfLine,
+    .scxPriceStyleDialog_input_reversalDoubleAmount {
+      display: inline-block;
+      width: 8.95572em;
+    }
+
+    .scxPriceStyleDialog_label {
+      padding-left: 0.3em;
+      width: 8em;
+      text-align: left;
+    }
+
+    .scxPriceStyleDialog_label_ATRLength,
+    .scxPriceStyleDialog_label_source,
+    .scxPriceStyleDialog_label_boxSizeKind,
+    .scxPriceStyleDialog_label_boxSize,
+    .scxPriceStyleDialog_label_reversalAmount,
+    .scxPriceStyleDialog_label_numberOfLine,
+    .scxPriceStyleDialog_label_reversalDoubleAmount,
+    .scxPriceStyleDialog_label_barStyle,
+    .scxPriceStyleDialog_label_instrumentPriceStyle,
+    .scxPriceStyleDialog_label_coloredBarStyle {
+      padding-left: 0.3em;
+      width: 12em;
+    }
+
+    .scxPriceStyleDialog_panel_ntb_inputsPanel {
+      @include dialogsPanelFigure();
+
+      table {
+        td {
+          &:last-child {
+            & > * {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+
+    .scxNumericField-arrowWrapper {
+      background: transparent;
+      border-left: 0;
+      padding-top: 0 !important;
+    }
+
+    .scxNumericField-arrowDown {
+      right: 1px;
+      margin-top: 12px;
+
+      .scxNumericFieldArrow {
+        border-width: 4px 4px 0 4px;
+      }
+    }
+
+    .scxNumericField-arrowUp {
+      right: 1px;
+      margin-top: 1px;
+
+      .scxNumericFieldArrow {
+        border-width: 0 4px 4px 4px;
+      }
+    }
+  }
+}
