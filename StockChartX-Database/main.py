@@ -1,13 +1,20 @@
 from sqlalchemy import create_engine, MetaData, select
 from sqlalchemy.orm import Session
 import pandas as pd
-from flask import Flask, request
-from flask_cors import CORS
+#from flask import Flask, request
+from fastapi import FastAPI, Request
+#from flask_cors import CORS
+from fastapi.middleware.cors import CORSMiddleware
 import os
+import uvicorn
 
-app = Flask(__name__)
 
-CORS(app)
+app = FastAPI()
+
+#CORS(app)
+origins = ["*"]
+app.add_middleware(CORSMiddleware, allow_origins=origins)
+
 database_connection_string = 'postgresql://postgres:postgres@ec2-18-141-177-116.ap-southeast-1.compute.amazonaws.com:5432/Project-Hamburg'
 engine = create_engine(database_connection_string)
 session = Session(engine)
@@ -19,15 +26,17 @@ TickerTable = meta.tables['Ticker']
 TDAmeritradeDailyTable = meta.tables['TDAmeritradeDailyPrice']
 TDAmeritradeMinuteTable = meta.tables['TDAmeritradeMinutePrice']
 
-@app.route('/')
-def database_query():
+@app.get('/')
+def database_query(Ticker:str='AAPL', Time:str=1):
     
     #Parameters
-    ticker_name = request.args.get('Ticker', 'AAPL')
-    timeframe_minutes = request.args.get('Time', 1)
+    #ticker_name = request.args.get('Ticker', 'AAPL')
+    ticker_name= Ticker
+    #timeframe_minutes = request.args.get('Time', 1)
+    timeframe_minutes = Time
     timeframe_minutes_int = int(timeframe_minutes)
     result_filename = ticker_name + "-" + timeframe_minutes + ".csv"
-    result_filepath = "C:/Users/Luksh Kumar/Desktop/14-StockChartX-HTML5/src/data/" + result_filename
+    result_filepath = "../src/data/" + result_filename
     if (os.path.exists(result_filepath)):
         return 'data/' + result_filename
         
@@ -100,7 +109,7 @@ def database_query():
     return 'data/' + result_filename
 
 if __name__ == '__main__':
-    app.run()
+    uvicorn.run("main:app")
 
 
 
