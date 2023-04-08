@@ -1,5 +1,7 @@
 /* global Promise, MyCustomMACD */
 
+const milliseconds = require("mocha/lib/ms");
+
 $(function() {
   "use strict";
 
@@ -10,9 +12,23 @@ $(function() {
   
   var datafeed = new StockChartX.CsvDatafeed({
     urlBuilder: function(request) {
+       var timeIntervalMinutes = 1;
       
-      //Time Interval is in milliseconds - we have converted it to minutes  
-        var timeIntervalMinutes = (request.chart.timeInterval/1000)/60;
+       TimeSelectedInMilliseconds = request.chart.timeInterval;
+       // Yearly
+       if(TimeSelectedInMilliseconds == 31556926000){
+          timeIntervalMinutes = 0;
+        }
+        // Monthly
+        else if(TimeSelectedInMilliseconds == 2629743830)
+        {
+          timeIntervalMinutes = 0;
+        }
+        else{
+          //Time Interval is in milliseconds - we have converted it to minutes  
+         timeIntervalMinutes = (TimeSelectedInMilliseconds/1000)/60;
+      
+        }
         var instrument = request.instrument || request.chart.instrument;
         return [instrument.symbol, timeIntervalMinutes];
     },
