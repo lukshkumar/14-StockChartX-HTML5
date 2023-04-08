@@ -1,0 +1,4 @@
+pip install fastapi uvicorn
+
+uvicorn main:app --workers 4 # --reload  #if running on default port - 8000
+python main.py #if running on custom defined port - 8001
