@@ -85,7 +85,7 @@ export class CsvDatafeed extends Datafeed {
 
 		let url = this._buildUrl(request);
 
-		$.get(`http://127.0.0.1:5000?Ticker=${url[0]}&Time=${url[1]}`)
+		$.get(`http://18.141.177.116:5000/?Ticker=${url[0]}&Time=${url[1]}`)
 			.done((path) => {
 				$.get(path, (data: any) => {
 					if (this.isRequestAlive(request)) {

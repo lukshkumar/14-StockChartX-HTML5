@@ -458,6 +458,14 @@ export class Toolbar {
       chart.sendBarsRequest();
       chart.timeInterval = TimeFrame.timeFrameToTimeInterval(timeFrame);
       chart.fireValueChanged(ChartEvent.TIME_FRAME_CHANGED, timeFrame);
+
+      ///// New addition to refresh time-frame change /////
+      var current_instrument = JSON.parse(JSON.stringify(this.chart.instrument)); ;
+
+      chart.fireValueChanged(ChartEvent.SYMBOL_ENTERED, current_instrument);
+      
+        chart.instrument = current_instrument;
+        chart.sendBarsRequest();
     }
   }
 
