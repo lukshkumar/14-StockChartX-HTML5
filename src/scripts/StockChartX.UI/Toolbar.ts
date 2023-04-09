@@ -466,7 +466,6 @@ export class Toolbar {
       
         chart.instrument = current_instrument;
         chart.sendBarsRequest();
-      
     }
   }
 

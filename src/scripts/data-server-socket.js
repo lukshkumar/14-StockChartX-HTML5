@@ -144,12 +144,12 @@ $(function() {
     });
     gChart.on(StockChartX.ChartEvent.TIME_FRAME_CHANGED, function(event) {
       // TODO: Process time frame change
-      gChart.timeInterval = StockChartX.TimeFrame.timeFrameToTimeInterval(
-        event.value.interval,
-        event.value.periodicity
-      );
-      unsubscribe();
-      subscribe();
+      // gChart.timeInterval = StockChartX.TimeFrame.timeFrameToTimeInterval(
+      //   event.value.interval,
+      //   event.value.periodicity
+      // );
+      //unsubscribe();
+      //subscribe();
     });
     gChart.on(StockChartX.ChartEvent.MORE_HISTORY_REQUESTED, function() {
       console.log("TODO: Load more history!");
