@@ -1,33 +1,45 @@
 /* global Promise, MyCustomMACD */
 
-$(function() {
+$(function () {
   "use strict";
 
   var isDebugMode = window.location.port === "63342";
   var isMobile =
     StockChartX.Environment.isMobile || StockChartX.Environment.isPhone;
   var isFullWindowMode = isDebugMode || isMobile;
-  
+
   var datafeed = new StockChartX.CsvDatafeed({
-    urlBuilder: function(request) {
-      
+    urlBuilder: function (request) {
+      var TimeSelectedInMilliseconds = request.chart.timeInterval;
+      if (TimeSelectedInMilliseconds % 2629743830 == 0) {
+        var diff = TimeSelectedInMilliseconds % (1 * 30 * 24 * 60 * 60 * 1000);
+        var f = TimeSelectedInMilliseconds - diff;
+        TimeSelectedInMilliseconds = f;
+      }
+      // Yearly
+      else if (TimeSelectedInMilliseconds % 31556926000 == 0) {
+        var diff = TimeSelectedInMilliseconds % (1 * 365 * 24 * 60 * 60 * 1000);
+        var f = TimeSelectedInMilliseconds - diff;
+        TimeSelectedInMilliseconds = f;
+      }
       //Time Interval is in milliseconds - we have converted it to minutes  
-        var timeIntervalMinutes = (request.chart.timeInterval/1000)/60;
-        var instrument = request.instrument || request.chart.instrument;
-        return [instrument.symbol, timeIntervalMinutes];
+      var timeIntervalMinutes = (TimeSelectedInMilliseconds / 1000) / 60;
+
+      var instrument = request.instrument || request.chart.instrument;
+      return [instrument.symbol, timeIntervalMinutes];
     },
-    dateFormat: function() {
-        return 'YYYY-MM-DD hh:mm:ss';
+    dateFormat: function () {
+      return 'YYYY-MM-DD hh:mm:ss';
     }
   });
 
-  window.createChart = function(config) {
+  window.createChart = function (config) {
     setupInstruments();
 
     return createChart(config);
   };
 
-  window.createMultiCharts = function(config) {
+  window.createMultiCharts = function (config) {
     setupInstruments();
 
     return createMultiCharts(config);
@@ -38,14 +50,14 @@ $(function() {
       ? "data/symbols.mobile.json"
       : "data/symbols.json";
 
-    $.get(symbolsFilePath, function(symbols) {
+    $.get(symbolsFilePath, function (symbols) {
       var allSymbols =
         typeof symbols === "string" ? JSON.parse(symbols) : symbols;
 
-      StockChartX.getAllInstruments = function() {
+      StockChartX.getAllInstruments = function () {
         return allSymbols;
       };
-    }).fail(function() {
+    }).fail(function () {
       StockChartX.UI.Notification.error("Load symbols failed.");
     });
   }
@@ -102,7 +114,7 @@ $(function() {
   }
 
   function setupChartWithoutState(chart, config) {
-    return new Promise(function(resolve) {
+    return new Promise(function (resolve) {
       if (config.indicators !== false) setupIndicators(chart);
 
       resolve(chart);
@@ -110,18 +122,18 @@ $(function() {
   }
 
   function setupChartWithState(chart, config) {
-    return new Promise(function(resolve) {
+    return new Promise(function (resolve) {
       chart.stateHandler
         .load()
-        .then(function(isLoaded) {
+        .then(function (isLoaded) {
           if (!isLoaded && config.indicators !== false) setupIndicators(chart);
 
           resolve(chart);
         })
-        .catch(function(error) {
+        .catch(function (error) {
           StockChartX.UI.Notification.error(error.message);
 
-          chart.stateHandler.clear().then(function() {
+          chart.stateHandler.clear().then(function () {
             chart.destroy(false);
 
             createChart(config);
@@ -158,12 +170,11 @@ $(function() {
     volume.setParameterValue(StockChartX.IndicatorParam.LINE_WIDTH, 5);
   }
 
-  function returnUrl(name, period)
-  {
+  function returnUrl(name, period) {
     var symbol = 'AAPL';
     var time = StockChartX.Periodicity.DAY;
 
-    switch(name){
+    switch (name) {
       case 'AAPL':
       case 'MSFT':
       case 'GOOG':
@@ -174,7 +185,7 @@ $(function() {
         break;
     }
 
-    switch(period){
+    switch (period) {
       case StockChartX.Periodicity.DAY:
       case StockChartX.Periodicity.WEEK:
       case StockChartX.Periodicity.MONTH:
@@ -186,7 +197,7 @@ $(function() {
       default:
         break;
     }
-    
+
     return 'data/' + symbol + '-' + time + '.csv';
   }
 
